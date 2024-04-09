@@ -84,7 +84,7 @@ async def yas(client, message):
     usr = await client.get_chat("EU_TM")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"معلومات مطور السورس.\n\n¦dev :{name}\n\n ¦user :@{usr.username}\n\n ¦id :`{usr.id}`\n\n ¦boi :{usr.bio}\n\n𝐒𝐎𝐔𝐑𝐂𝐄 𝐁𝐎𝐃𝐀", 
+    await message.reply_photo(photo,       caption=f"مــعلومـات مــطور الـسـورس \n\n dev :{name}\n\n user :@{usr.username}\n\n id :`{usr.id}`\n\n boi :{usr.bio}\n\n 𝐒𝐎𝐔𝐑𝐂𝐄 𝐁𝐎𝐃𝐀", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -106,7 +106,7 @@ async def yas(client, message):
     usr = await client.get_chat("Pep_s_e")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"معلومات مبرمج السورس.\n\n¦dev :{name}\n\n ¦user :@{usr.username}\n\n ¦id :`{usr.id}`\n\n ¦bio :{usr.bio}\n\n𝐒𝐎𝐔𝐑𝐂𝐄 𝐁𝐎𝐎𝐃𝐀", 
+    await message.reply_photo(photo,       caption=f"مــعلـومـات مــبرمـج الـسـورس  \n\n dev :{name}\n\n user :@{usr.username}\n\n id :`{usr.id}`\n\n bio :{usr.bio}\n\n𝐒𝐎𝐔𝐑𝐂𝐄 𝐁𝐎𝐎𝐃𝐀", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [

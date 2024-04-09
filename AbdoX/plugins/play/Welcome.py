@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 import asyncio
 
 
-LOGGER = getLogger(__name__)
+
 
 class WelDatabase:
     def __init__(self):

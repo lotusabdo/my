@@ -6,7 +6,7 @@ from config import OWNER_ID
 from AbdoX.misc import SUDOERS
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ReplyKeyboardMarkup
 from pyrogram.types import (InlineKeyboardButton,CallbackQuery,InlineKeyboardMarkup, Message)
-from AbdoX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AbdoX import (Apple, Resso, Spotify, Telegram, YouTube, app)
 
 
 @app.on_message(filters.command(["ابراج","الابراج","✨ابراج"], ""))

@@ -122,8 +122,8 @@ async def get_thumb(videoid):
             font4 = ImageFont.truetype('AbdoX/assets/font2.ttf', 35)
 
             image4 = ImageDraw.Draw(image2)
-            image4.text((10, 10), "𝐀𝐛𝐝𝐨𝐗 𝐌𝐮𝐬𝐢𝐜", fill="white", font = font1, align ="left") 
-            image4.text((670, 150), "𝐀𝐛𝐝𝐨𝐗 𝐏𝐋𝐀𝐘𝐈𝐍𝐆", fill="white", font = font2, stroke_width=2, stroke_fill="white", align ="left") 
+            image4.text((10, 10), "AbdoX Music", fill="white", font = font1, align ="left") 
+            image4.text((670, 150), "AbdoX PLAYING", fill="white", font = font2, stroke_width=2, stroke_fill="white", align ="left") 
 
             # title
             title1 = truncate(title)

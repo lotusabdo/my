@@ -19,7 +19,6 @@ from .platforms import *
 
 Apple = AppleAPI()
 Carbon = CarbonAPI()
-Spotify = SpotifyAPI()
 Resso = RessoAPI()
 Telegram = TeleAPI()
 YouTube = YouTubeAPI()

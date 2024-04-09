@@ -10,7 +10,7 @@ import random
 from pyrogram import enums
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
-from AbdoX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AbdoX import (Apple, Resso, Spotify, Telegram, YouTube, app)
 from AbdoX import app
 from random import  choice, randint
 

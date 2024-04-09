@@ -101,7 +101,7 @@ async def greet_group(_, member: ChatMemberUpdated):
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"ضـيف البـوت لمجموعتـك ✅", url=f"https://t.me/UUIYBOT?startgroup=true")]])
         )
     except Exception as e:
-        LOGGER.error(e)
+        
     try:
         os.remove(f"downloads/welcome#{user.id}.png")
         os.remove(f"downloads/pp{user.id}.png")

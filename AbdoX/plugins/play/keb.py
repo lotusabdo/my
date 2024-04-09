@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from random import choice
 from pyrogram import filters
 from config import BANNED_USERS
-from AbdoX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AbdoX import (Apple, Resso, Spotify, Telegram, YouTube, app)
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, Message, ChatJoinRequest

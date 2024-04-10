@@ -1,5 +1,7 @@
-import asyncio
+#_____كسمك تحياتي 
+#_____@EU_TM
 
+import asyncio
 import os
 import time
 import requests

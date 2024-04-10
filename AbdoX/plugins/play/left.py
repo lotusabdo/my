@@ -55,8 +55,8 @@ async def get_userinfo_img(
 
 
 
-bg_path = "AbdoX/assets/dil.png"
-font_path = "AbdoX/assets/userdil.ttf"
+bg_path = "AbdoX/assets/userinfo.png"
+font_path = "AbdoX/assets/hiroko.ttf"
 
 
 

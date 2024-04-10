@@ -1,3 +1,6 @@
+#_____كسمك تحياتي 
+#_____@EU_TM
+
 from AbdoX import app
 from pyrogram import Client, filters
 from pyrogram.errors import RPCError
@@ -53,7 +56,7 @@ async def get_userinfo_img(
 
 
 bg_path = "AbdoX/assets/dil.png"
-font_path = "AbdoX/assets/hiroko.ttf"
+font_path = "AbdoX/assets/userdil.ttf"
 
 
 
@@ -91,8 +94,8 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
                 profile_path=photo,
             )
         
-            caption = f"**❬ حد يكون فى روم زى ده ويخرج ❭ 🙄**\n\n**⌯︙**بالسـلامات 😹♥ {user.mention} .**\n**⌯︙ وداعاً... اراك قـريبا ي أخي**"
-            button_text = "๏ 🙄 الواد الي خرج ๏"
+            caption = f"❬ حد يكون فى روم زى ده ويخرج ❭ \n\n︙بالسـلامات 😹♥ {user.mention} .\n︙ وداعاً... اراك قـريبا ي أخي"
+            button_text = " الواد الي خرج"
 
             # Generate a deep link to open the user's profile
             deep_link = f"tg://openmessage?user_id={user.id}"

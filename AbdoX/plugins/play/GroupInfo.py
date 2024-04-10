@@ -1,3 +1,7 @@
+#_____كسمك تحياتي 
+#_____@EU_TM
+
+
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from AbdoX import app

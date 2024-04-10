@@ -1,3 +1,6 @@
+#_____كسمك تحياتي 
+#_____@EU_TM
+
 from pyrogram import Client, filters, idle
 from pyrogram import Client
 import requests

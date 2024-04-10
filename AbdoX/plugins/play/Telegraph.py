@@ -6,7 +6,7 @@ from telegraph import upload_file
 from AbdoX import app
 
 
-#---------------FUNCTION---------------#
+
 
 def get_file_id(msg: Message) -> Optional[Message]:
     if not msg.media:
@@ -18,7 +18,7 @@ def get_file_id(msg: Message) -> Optional[Message]:
             setattr(obj, "message_type", message_type)
             return obj
 
-#---------------FUNCTION---------------#
+
 
 
 @app.on_message(filters.command("ميديا", prefixes=""))

@@ -9,10 +9,14 @@ from AbdoX.misc import HAPP, SUDOERS, XCB
 from config import OWNER_ID
                                        
                                        
-@app.on_callback_query(filters.regex("zzzback"))
-async def zzzback(_, query: CallbackQuery):
-   await query.edit_message_text(
-       f"""<b>↯︙مرحباً بك عزيزي</b>\n<b>↯︙استخدم الازرار بالاسفل\n↯︙ل تصفح اوامر الميوزك</b>""",
+@app.on_message(command(["الاوامر"]))
+async def zdatsr(client: Client, message: Message):
+    usr = await client.get_users(OWNER_ID)
+    name = usr.first_name
+    usrnam = usr.username
+    await message.reply_video(
+        video=f"https://t.me/HQ_BX/5",
+        caption=f"𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐋𝐨𝐭𝐮𝐬 𝐌𝐮𝐬𝐢𝐜",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -26,6 +30,8 @@ async def zzzback(_, query: CallbackQuery):
                 ],[
                     InlineKeyboardButton(
                         "‹ اوامر المطور ›", callback_data="zzzdv"),
+                ],[
+                    InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
                 ],[
                     InlineKeyboardButton(
                         "𝐒𝐎𝐔𝐑𝐂𝐄 𝐁𝐎𝐃𝐀", url="https://t.me/l2_2Y"),

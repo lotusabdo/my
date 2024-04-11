@@ -4,8 +4,8 @@ from strings.filters import command
 from pyrogram.types import InlineKeyboardButton, CallbackQuery, InlineKeyboardMarkup, Message
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
-from MatrixMusic import app
-from MatrixMusic.misc import HAPP, SUDOERS, XCB
+from AbdoX import app
+from AbdoX.misc import HAPP, SUDOERS, XCB
 from config import OWNER_ID
                                        
                                        

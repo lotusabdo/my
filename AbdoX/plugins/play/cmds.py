@@ -6,18 +6,18 @@ from pyrogram import Client, filters, emoji
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from pyrogram.errors import MessageNotModified
-from AbdoX import app
+from MatrixMusic import app
 from config import OWNER_ID, LOGGER_ID
 
 
-@app.on_message(command(["الاوا"]))
+@app.on_message(command(["الاوامر"]))
 async def zdatsr(client: Client, message: Message):
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
     usrnam = usr.username
     await message.reply_video(
-        video=f"https://t.me/HQ_BX/5",
-        caption=f"𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐋𝐨𝐭𝐮𝐬 𝐌𝐮𝐬𝐢𝐜",
+        video=f"https://telegra.ph/file/e6f815307a347ec6e17d5.mp4",
+        caption=f"""<b>↯︙مرحباً بك عزيزي</b>\n<b>↯︙استخدم الازرار بالاسفل\n» ل تصفح اوامر الميوزك</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -35,7 +35,7 @@ async def zdatsr(client: Client, message: Message):
                     InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
                 ],[
                     InlineKeyboardButton(
-                        "𝐒𝐎𝐔𝐑𝐂𝐄 𝐁𝐎𝐃𝐀", url="https://t.me/l2_2Y"),
+                        "‹ ᥉᥆ᥙᖇᥴᥱ ᥉᥆ꪔ3ᥲ ›", url="https://t.me/SOURCE_SOM3A"),
                 ],
             ]
         ),

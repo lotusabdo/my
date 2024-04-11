@@ -1,7 +1,7 @@
 import asyncio
 import os
 from pyrogram.types import CallbackQuery
-from AbdoX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AbdoX import (Apple, Resso, Spotify, Telegram, YouTube, app)
 from AbdoX import app
 import requests
 import pyrogram

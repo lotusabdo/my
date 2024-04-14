@@ -4,7 +4,6 @@ from pyrogram.errors import PeerIdInvalid
 from pyrogram.types import Message, User
 from AbdoX import app
 
-
 def ReplyCheck(message: Message):
     reply_id = None
 
@@ -18,7 +17,7 @@ def ReplyCheck(message: Message):
 
 
 infotext = (
-    "ꪀᥲ️︎ꪔᥱ︎ :{message.from_user.mention}\n"
+    "[{full_name}](tg://user?id={user_id})\n\n"
     " ➻ ايـديك: `{user_id}`\n"
     " ➻ اسـمك : `{first_name}`\n"
     " ➻ يـوزرك: `@{username}`\n"
@@ -49,7 +48,7 @@ def FullName(user: User):
     return user.first_name + " " + user.last_name if user.last_name else user.first_name
 
 
-@app.on_message(filters.command("ايدي",prefixes=""))
+@app.on_message(filters.command("ا",prefixes=""))
 async def whois(client, message):
     cmd = message.command
     if not message.reply_to_message and len(cmd) == 1:

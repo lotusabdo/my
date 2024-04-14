@@ -7,8 +7,8 @@ import config
 from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
-from AarohiX import (Apple, Resso, Telegram, YouTube, app)
-from AarohiX import app
+from AbdoX import (Apple, Resso,Spotify, Telegram, YouTube, app)
+from AbdoX import app
 
 import re
 import sys

@@ -1,7 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AbdoX import app
-from config import l2_2Y, OWNER_ID
 
 @app.on_message(filters.private & filters.user(OWNER_ID))
 async def must_join_channel(_, message):

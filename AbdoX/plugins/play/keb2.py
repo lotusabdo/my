@@ -40,7 +40,7 @@ async def bkouqw(client: Client, message: Message):
 
 
           ]
-        ),
+        )
     )
 
 

@@ -11,10 +11,10 @@ from pyrogram.types import (
     InputMediaPhoto,
     Message,
 )
-from AbdoX import (Apple, Resso, Spotify, Telegram, YouTube, app)
+from AbdoX import (Apple, Resso, Telegram, YouTube, app)
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from config import OWNER_ID, Muntazer
+from config import OWNER_ID
 
 @app.on_message(filters.command("نادي المطور", ["", ""]) & filters.group)
 async def call_dev(client: Client, message: Message):

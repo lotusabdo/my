@@ -10,7 +10,7 @@ from AbdoX import app
 
 @app.on_message(
     command(["كرتون"])
-    & ~filters.edited
+    
 )
 async def cartoon(c: Client, m: Message):
     global mid

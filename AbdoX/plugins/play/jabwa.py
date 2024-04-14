@@ -1,6 +1,5 @@
 import asyncio
 from pyrogram import Client, filtersغ
-from strings import get_command
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from AbdoX import (Apple, Resso,Spotify, Telegram, YouTube, app)
@@ -8,7 +7,7 @@ from AbdoX import (Apple, Resso,Spotify, Telegram, YouTube, app)
 
 @app.on_message(
      command(["/help", "الاوامر"])
-    & ~filters.edited
+    
 )
 async def khalid(client: Client, message: Message):
     await message.reply_photo(

@@ -1,6 +1,3 @@
-#_____كسمك تحياتي 
-#_____@EU_TM
-
 from datetime import datetime
 from pyrogram import filters
 from pyrogram.errors import PeerIdInvalid
@@ -20,16 +17,8 @@ def ReplyCheck(message: Message):
     return reply_id
 
 
-caption=f""" -
-    
-ꪀᥲ️︎ꪔᥱ︎ :{message.from_user.mention}\n- u᥉ᥱ︎ɾ :@{message.from_user.username}\n- Ꭵძ . :`{message.from_user.id}`\nႦᎥ᥆ :{usr.bio}\nᥴ𝗁ᥲ️ƚ: {message.chat.title}\n𝚒𝚍 𝚐𝚛𝚘𝚞𝚋 :`{message.chat.id}`""", 
-    reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        name, url=f"https://t.me/{message.from_user.username}")
-                ]
-    
+caption=f""" - ꪀᥲ️︎ꪔᥱ︎ :{message.from_user.mention}\n- u᥉ᥱ︎ɾ :@{message.from_user.username}\n- Ꭵძ . :`{message.from_user.id}`\nႦᎥ᥆ :{usr.bio}\nᥴ𝗁ᥲ️ƚ: {message.chat.title}\n𝚒𝚍 𝚐𝚛𝚘𝚞𝚋 :`{message.chat.id}`""",) 
+
 
 
 def LastOnline(user: User):
@@ -55,7 +44,7 @@ def FullName(user: User):
     return user.first_name + " " + user.last_name if user.last_name else user.first_name
 
 
-@app.on_message(filters.command("ا",prefixes=""))
+@app.on_message(filters.command("ايدي",prefixes=""))
 async def whois(client, message):
     cmd = message.command
     if not message.reply_to_message and len(cmd) == 1:

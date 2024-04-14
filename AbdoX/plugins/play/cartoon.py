@@ -1,20 +1,9 @@
-###############################################
-##  CopyRight & Creator File And Programing  ##
-##                                           ##
-##     #######  ######  #####*     *##*      ##
-##     #  #  #  ###     #     *   *    *     ##
-##     #     #  ##      #     *   *    *     ##
-##     #     #  #####   #####*     *##*      ##
-##                                        
-###############################################
-
+CopyRight & Creator File And Programing  
 import asyncio
-
-from strings import get_command
 from strings.filters import command
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
-from YukkiMusic import app
+from AbdoX import app
 
 ################################
 ####

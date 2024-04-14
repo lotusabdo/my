@@ -1,5 +1,5 @@
 import asyncio
-from pyrogram import Client, filtersغ
+from pyrogram import Client, filters
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from AbdoX import (Apple, Resso,Spotify, Telegram, YouTube, app)

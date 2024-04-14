@@ -1,4 +1,3 @@
-CopyRight & Creator File And Programing  
 import asyncio
 from strings.filters import command
 from pyrogram import Client, filters

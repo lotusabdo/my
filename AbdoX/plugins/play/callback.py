@@ -1,5 +1,5 @@
 from pyrogram import filters
-from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkupف
+from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from  AbdoX import app as Client
 from  AbdoX import app
 

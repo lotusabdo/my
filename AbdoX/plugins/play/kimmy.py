@@ -90,7 +90,7 @@ def cancel_hms(client, callback):
   text = "-> تم إلغاء الهمسه!\n√")
 
 array = []
-@app.on_message(command("@all","").replace("تاك","").replace("all","")
+@app.on_message(command("@all","").replace("تاك","").replace("all",""))
   except:
     pass
   array.append(message.chat.id)

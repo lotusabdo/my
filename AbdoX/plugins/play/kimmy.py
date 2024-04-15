@@ -130,4 +130,4 @@ async def stop(client, message):
      return 
   if message.chat.id in array:
     array.remove(message.chat.id)
-    await message.reply("♪ تم ايقاف المنشن عزيزي  💎 .
+    await message.reply("♪ تم ايقاف المنشن عزيزي  💎 .") 

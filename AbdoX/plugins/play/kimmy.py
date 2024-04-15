@@ -202,8 +202,8 @@ def promote_g_admin(client, message):
     	if tom.user.id == tom_id and (tom.status == enums.ChatMemberStatus.OWNER or tom.status == enums.ChatMemberStatus.ADMINISTRATOR):
     		client.promote_chat_member(chat_id, user_id, ToM)
     		message.reply(f"تم رفع {user_id} ادمن بنجاح")
-    	else:
-   		message.reply("يجب ان تكون مشرف لإستخدام الامر")
+    	#else:
+   	#  message.reply("يجب ان تكون مشرف لإستخدام الامر")
 
 app.run() 	 
 

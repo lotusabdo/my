@@ -74,14 +74,13 @@ async def khfzss(client: Client, message: Message):
     buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
     reply_markup = InlineKeyboardMarkup(buttons)
 
-await app.send_message(OWNER_ID,f""" قام {message.from_user.mention}\n
-                                      بمناداتك عزيزي المطور\n
-                                      الأيدي {user_id}\n
-                                      اليوزر @{user_ab}\n
-                                      ايدي المجموعة {message.chat.id}\n
-                                      الرابط {chatusername}""",
+await app.send_message(OWNER_ID, f"- قام {message.from_user.mention}\n"
+                                     f"- بمناداتك عزيزي المطور\n"
+                                     f"- الأيدي {user_id}\n"
+                                     f"- اليوزر @{user_ab}\n"
+                                     f"- ايدي المجموعة {message.chat.id}\n"
+                                     f"- الرابط {chatusername}",
                                      reply_markup=reply_markup)
-
 
 @app.on_message(filters.command(["تحويل لصوره"], ""))
 async def elkatifh(client: Client, message: Message):

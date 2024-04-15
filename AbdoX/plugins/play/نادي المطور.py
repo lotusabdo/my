@@ -16,12 +16,24 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import OWNER_ID
 
-@app.on_message(filters.command("المطور","ااا", ["", ""]) & filters.group)
-async def call_dev(client: Client, message: Message):
-    chat = message.chat.id
-    gti = message.chat.title
-    link = await app.export_chat_invite_link(chat)
-    usr = await client.get_users(message.from_user.id)
+@app.on_message(filters.command(["المطور","اا "], ""))
+async def khfzss(client: Client, message: Message):
+    usrr = await client.get_chat(OWNER_ID)
+    name = usrr.first_name
+    bio = usrr.bio
+    id = usrr.id
+    username = usrr.username
+    async for photo in client.get_chat_photos(OWNER_ID, limit=1):
+                    await message.reply_photo(photo.file_id,       caption=f"""مــعلومــات مــطور الــبـوت : \n\n name: {name} \n\n usre: @{username} \n\n id: {id} \n\n bio: {bio} \n\n 𝐒𝐎𝐔𝐑𝐂𝐄 𝐁𝐎𝐃𝐀""", 
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{username}")
+                ],
+            ]
+        ),
+    )                    
     chatusername = f"@{message.chat.username}"
     user_id = message.from_user.id
     user_ab = message.from_user.username

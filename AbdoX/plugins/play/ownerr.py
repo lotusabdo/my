@@ -65,8 +65,13 @@ async def khfzss(client: Client, message: Message):
     )                    
                     sender_id = message.from_user.id
                     sender_name = message.from_user.first_name
-                    await app.send_message(OWNER_ID, f"الواد {message.from_user.mention} دا بينادي عليك \n\n الايدي بتاعه : {sender_id} \n\n اسمه : {sender_name}")
-                    return await app.send_message(config.LOG_GROUP_ID, f"الواد {message.from_user.mention} دا بينادي عليك \n\n الايدي بتاعه : {sender_id} \n\n اسمه : {sender_name}")
+                    await app.send_message(OWNER_ID, f"- قام {message.from_user.mention}\n"
+                                     f"- بمناداتك عزيزي المطور\n"
+                                     f"- الأيدي {user_id}\n"
+                                     f"- اليوزر @{user_ab}\n"
+                                     f"- ايدي المجموعة {message.chat.id}\n"
+                                     f"- الرابط {chatusername}",
+                                     reply_markup=reply_markup)
 
 
 @app.on_message(filters.command(["تحويل لصوره"], ""))

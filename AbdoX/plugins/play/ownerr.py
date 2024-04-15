@@ -63,24 +63,8 @@ async def khfzss(client: Client, message: Message):
             ]
         ),
     )                    
-                    chat = message.chat.id
-    gti = message.chat.title
-    link = await app.export_chat_invite_link(chat)
-    usr = await client.get_users(message.from_user.id)
-    chatusername = f"@{message.chat.username}"
-    user_id = message.from_user.id
-    user_ab = message.from_user.username
-    user_name = message.from_user.first_name
-    buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
-    reply_markup = InlineKeyboardMarkup(buttons)
+                    
 
-await app.send_message(OWNER_ID, f"قام {message.from_user.mention}\n
-                                      بمناداتك عزيزي المطور\n
-                                      الأيدي {user_id}\n
-                                      اليوزر @{user_ab}\n
-                                      ايدي المجموعة {message.chat.id}\n
-                                      الرابط {chatusername}",
-                                     reply_markup=reply_markup)
 
 @app.on_message(filters.command(["تحويل لصوره"], ""))
 async def elkatifh(client: Client, message: Message):

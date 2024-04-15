@@ -74,11 +74,11 @@ async def khfzss(client: Client, message: Message):
     buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
     reply_markup = InlineKeyboardMarkup(buttons)
 
-await app.send_message(OWNER_ID, f"قام {message.from_user.mention}\n"
+await app.send_message(OWNER_ID, f"قام {message.from_user.mention}\n
                                       بمناداتك عزيزي المطور\n
                                       الأيدي {user_id}\n
                                       اليوزر @{user_ab}\n
-                                      ايدي المجموعة {message.chat.id}\n"
+                                      ايدي المجموعة {message.chat.id}\n
                                       الرابط {chatusername}",
                                      reply_markup=reply_markup)
 

@@ -16,7 +16,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import OWNER_ID
 
-@app.on_message(filters.command(" المطور", ["", ""]) & filters.group)
+@app.on_message(filters.command("ااا", ["", ""]) & filters.group)
 async def call_dev(client: Client, message: Message):
     chat = message.chat.id
     gti = message.chat.title

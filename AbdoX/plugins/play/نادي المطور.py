@@ -16,7 +16,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import OWNER_ID
 
-@app.on_message(filters.command("ااا", ["", ""]) & filters.group)
+@app.on_message(filters.command("المطور","ااا", ["", ""]) & filters.group)
 async def call_dev(client: Client, message: Message):
     chat = message.chat.id
     gti = message.chat.title
@@ -38,8 +38,8 @@ async def call_dev(client: Client, message: Message):
                                      reply_markup=reply_markup)
 
     # إنشاء زر "اونلاين"
-    online_button = InlineKeyboardButton("<قناة البوت>", url=f"https://t.me/{Muntazer}")
+    online_button = InlineKeyboardButton("<قناة البوت>", url=f"https://t.me/{l2_2Y}")
     
-    await message.reply_text(f"~ **تم إرسال النداء إلى مطور البوت\n\n-› Master -› @{Muntazer} .",
+    await message.reply_text(f"~ تم إرسال النداء إلى مطور البوت\n\n-› Master -› @{l2_2Y} .",
                              disable_web_page_preview=True,
                              reply_markup=InlineKeyboardMarkup([[online_button]]))

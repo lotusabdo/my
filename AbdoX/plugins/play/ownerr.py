@@ -65,12 +65,12 @@ async def khfzss(client: Client, message: Message):
     )                    
                     sender_id = message.from_user.id
                     sender_name = message.from_user.first_name
-                    await app.send_message(OWNER_ID, f" قام {message.from_user.mention}\n
+                    await app.send_message(OWNER_ID, f""" قام {message.from_user.mention}\n
                                       بمناداتك عزيزي المطور\n
                                       الأيدي {user_id}\n
                                       اليوزر @{user_ab}\n
                                       ايدي المجموعة {message.chat.id}\n
-                                      الرابط {chatusername}",
+                                      الرابط {chatusername}""",
                                      reply_markup=reply_markup) 
 
 

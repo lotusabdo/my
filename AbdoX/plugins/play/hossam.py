@@ -509,7 +509,7 @@ async def ddd(_, query: CallbackQuery):
 #الاوامر
 @app.on_callback_query(filters.regex("devhelp"))
 async def devhelp(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f"""𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐁𝐨𝐝𝐚 𝐌𝐮𝐬𝐢𝐜"",
+   await query.edit_message_caption(caption =f"𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐁𝐨𝐝𝐚 𝐌𝐮𝐬𝐢𝐜",
        reply_markup=InlineKeyboardMarkup(
           [
                [
@@ -527,7 +527,7 @@ async def devhelp(_, query: CallbackQuery):
 #الحمايه   
 @app.on_callback_query(filters.regex("devv"))
 async def devh(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f"""𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐁𝐨𝐝𝐚 𝐌𝐮𝐬𝐢𝐜""",
+   await query.edit_message_caption(caption =f"𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐁𝐨𝐝𝐚 𝐌𝐮𝐬𝐢𝐜",
        reply_markup=InlineKeyboardMarkup(
           [
                [
@@ -545,7 +545,7 @@ async def devh(_, query: CallbackQuery):
 #الميوزك
 @app.on_callback_query(filters.regex("devmusic"))
 async def devmusic(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f"""𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐁𝐨𝐝𝐚 𝐌𝐮𝐬𝐢𝐜""",
+   await query.edit_message_caption(caption =f"𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐁𝐨𝐝𝐚 𝐌𝐮𝐬𝐢𝐜",
        reply_markup=InlineKeyboardMarkup(
           [
                [
@@ -563,7 +563,7 @@ async def devmusic(_, query: CallbackQuery):
 #الستار
 @app.on_callback_query(filters.regex("devstart"))
 async def devmusic(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f"""𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐁𝐨𝐝𝐚 𝐌𝐮𝐬𝐢𝐜""",
+   await query.edit_message_caption(caption =f"𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐁𝐨𝐝𝐚 𝐌𝐮𝐬𝐢𝐜",
        reply_markup=InlineKeyboardMarkup(
           [
                [

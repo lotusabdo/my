@@ -84,10 +84,10 @@ async def get_thumb(videoid):
             background = enhancer.enhance(0.6)
             image2 = background
                                                                                             
-           AFYONA = Image.open('AbdoX/assets/AFYONA.png')
+            circle = Image.open("AbdoX/assets/circle.png")
 
-            # changingAFYONA color
-            im =AFYONA
+            # changing circle color
+            im = circle
             im = im.convert('RGBA')
             color = make_col()
 
@@ -98,7 +98,7 @@ async def get_thumb(videoid):
             data[..., :-1][white_areas.T] = color
 
             im2 = Image.fromarray(data)
-           AFYONA = im2
+            circle = im2
             # done
 
             image3 = image1.crop((280,0,1000,720))
@@ -113,7 +113,7 @@ async def get_thumb(videoid):
             
 
             image2.paste(image3, (50,70), mask = image3)
-            image2.paste(circle, (0,0), mask =AFYONA)
+            image2.paste(circle, (0,0), mask = circle)
 
             # fonts
             font1 = ImageFont.truetype('AbdoX/assets/font.ttf', 30)

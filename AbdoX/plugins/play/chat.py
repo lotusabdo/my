@@ -145,10 +145,7 @@ async def stop_group_call(c: Client, m: Message):
        except:
          await msg.edit_text("خلي البوت معاه صلاحية اضافة مشرفين والتحكم ف المحادثه الصوتيه او خلي حساب المساعد مشرف")
 
-  chatQueue = []
-
-stopProcess = False
-
+  
 @app.on_message(filters.command(["تاك","all"]))
 async def everyone(client, message):
   global stopProcess

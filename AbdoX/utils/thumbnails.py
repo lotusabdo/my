@@ -84,7 +84,7 @@ async def get_thumb(videoid):
             background = enhancer.enhance(0.6)
             image2 = background
                                                                                             
-           AFYONA = Image.open("AbdoX/assets/AFYONA.png")
+           AFYONA = Image.open('AbdoX/assets/AFYONA.png')
 
             # changingAFYONA color
             im =AFYONA

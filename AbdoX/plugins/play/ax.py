@@ -8,7 +8,7 @@ from AbdoX.core.call import Zelzaly
 from AbdoX.utils.database import *
 from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError,AlreadyJoinedError)
 
-@app.on_message(filters.regex("^من في الكول$"))
+@app.on_message(filters.regex("^مين في الكول$"))
 async def strcall(client, message):
     assistant = await group_assistant(Zelzaly,message.chat.id)
     try:

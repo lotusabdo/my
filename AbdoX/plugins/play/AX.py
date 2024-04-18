@@ -12,7 +12,7 @@ from AbdoX import (Apple, Resso , Spotify, Telegram, YouTube, app)
 #########
 #الاوامر
 @app.on_message(
-    filters.command(["الااومر"],""))
+    filters.command(["الاوامر"],""))
 async def khalid(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/73299cc44862f1ec277dd.jpg",

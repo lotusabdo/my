@@ -68,7 +68,7 @@ async def send_hms(client, message):
       
      ) 
     
-    waiting_for_hms = False
+    
   
 @app.on_callback_query(filters.regex("hms_answer"), group=5766565)
 def display_hms(client, callback):  

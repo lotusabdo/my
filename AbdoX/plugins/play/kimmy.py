@@ -89,14 +89,7 @@ def cancel_hms(client, callback):
   message_id = callback.message.id,
   text = "-> تم إلغاء الهمسه!\n√")
 
-        welcome_enabled = True
-
-
-
-
-
-
-@app.on_chat_member_updated()
+    @app.on_chat_member_updated()
 async def welcome(client, chat_member_updated):
     if not welcome_enabled:
         return

@@ -89,27 +89,4 @@ def cancel_hms(client, callback):
   message_id = callback.message.id,
   text = "-> تم إلغاء الهمسه!\n√")
 
-    @app.on_chat_member_updated()
-async def welcome(client, chat_member_updated):
-    if not welcome_enabled:
-        return
-    
-    if chat_member_updated.new_chat_member.status == ChatMemberStatus.BANNED:
-        kicked_by = chat_member_updated.new_chat_member.restricted_by
-        user = chat_member_updated.new_chat_member.user
-        
-        if kicked_by is not None and kicked_by.is_self:
-            messagee = f"• المستخدم {user.username} ({user.first_name}) تم طرده من الدردشة بواسطة البوت"
-        else:
-            if kicked_by is not None:
-                message = f"• المستخدم {user.first_name} \n• تم طرده من الدردشة بواسطة {kicked_by.first_name}\n• ولقد طردته بسبب هذا"
-                try:
-                    await client.ban_chat_member(chat_member_updated.chat.id, kicked_by.id)
-                except Exception as e:
-                    message += f"\n\nعذرًا، لم استطع حظر الإداري بسبب: {str(e)}"
-            else:
-                message = f"• المستخدم {user.username} ({user.first_name}) تم طرده من الدردشة"
-            
-            
-        
-        await client.send_message(chat_member_updated.chat.id, message)
+    

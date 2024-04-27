@@ -8,132 +8,46 @@ from AbdoX import app
 
 
 
-#by > ####
 
+@Client.on_message(filters.command(["فتح الايدي", "تفعيل الايدي"], "")& filters.group)
+async def iddopen(client: Client, message):
+   get = await client.get_chat_member(message.chat.id, message.from_user.id)
+   if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
+      if not message.chat.id in iddof:
+        return await message.reply_text("**♪ الايدي مفعل من قبل  💎 .**")
+      iddof.remove(message.chat.id)
+      return await message.reply_text("**♪ تم تفعيل الايدي بنجاح  💎 .**")
+   else:
+      return await message.reply_text("**♪ عذرا عزيزي هذا الامر للادمن الجروب فقط  💎 .**")
 
-welcome_enabled = True
-
-
-
-
-
-
-@app.on_chat_member_updated()
-async def welcome(client, chat_member_updated):
-    if not welcome_enabled:
-        return
-    
-    if chat_member_updated.new_chat_member.status == ChatMemberStatus.BANNED:
-        kicked_by = chat_member_updated.new_chat_member.restricted_by
-        user = chat_member_updated.new_chat_member.user
-        
-        if kicked_by is not None and kicked_by.is_self:
-            messagee = f"⎉︙المستخدم {user.username} ({user.first_name}) تم طرده من الجروب بواسطة البوت"
-        else:
-            if kicked_by is not None:
-                message = f"━━━━━✯𝐒𝐎𝐔𝐑𝐂𝐄 𝐁𝐎𝐃𝐀 ✯━━━━━\n⎉︙تـم طـرد الـعـضـو @{user.username}\n⎉︙بـواسـطـة @{kicked_by.username}\n⎉︙تـم حـظـر مـن الـجـروب بـسـبـب طـرد عـضـو دون اذن \n━━━━━✯ [ @l2_2Y ] ✯━━━━━"
-                try:
-                    await client.ban_chat_member(chat_member_updated.chat.id, kicked_by.id)
-                except Exception as e:
-                    message += f"\n\nعذرًا، لم استطع حظر الإداري بسبب: {str(e)}"
-            else:
-                message = f"⎉︙المستخدم {user.username} ({user.first_name}) تم طرده من الدردشة"
+@Client.on_message(filters.command(["ايدي"], ""))
+async def muid(client: Client, message):
+       if message.chat.id in iddof:
+         return await message.reply_text("**♪ تم تعطيل امر الايدي من قبل المشرفين  💎 .**")
+       user = await client.get_chat(message.from_user.id)
+       user_id = user.id
+       username = user.username
+       first_name = user.first_name
+       bioo = user.bio
+       photo = user.photo.big_file_id
+       photo = await client.download_media(photo)
+       if not id.get(message.from_user.id):
+         id[user.id] = []
+       idd = len(id[user.id])
+       await message.reply_photo(photo=photo, caption=f"**name : {first_name}\nid : {user_id}\nuser : [@{username}]\nbio : {bioo}**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{idd} 🤍", callback_data=f"heart{user_id}")],]),)
             
-            
-        
-        await client.send_message(chat_member_updated.chat.id, message)
 
 
-
-
-@app.on_message(filters.command("رفع مشرف", "رفع ادمن") & filters.channel)
-def promote_c_admin(client, message):
-    if message.reply_to_message and message.reply_to_message.from_user:
-        target = message.reply_to_message.from_user.id
-        user_id = str(target)
-    elif message.reply_to_message is None:
-        target = message.text.split()[2]
-        user = app.get_users(target)
-        if user:
-            user_id = str(user.id)
-        else:
-            message.reply_text("لا يمكنني العثور على المستخدم")
-            return
+id = {}
+@app.on_callback_query(filters.regex("heart"))  
+async def heart(client, query: CallbackQuery):  
+    callback_data = query.data.strip()  
+    callback_request = callback_data.replace("heart", "")  
+    username = int(callback_request)
+    usr = await client.get_chat(username)
+    if not query.from_user.mention in id[usr.id]:
+         id[usr.id].append(query.from_user.mention)
     else:
-        target = message.text.split()[1].strip("@")
-        user = app.get_users(target)
-        if user:
-            user_id = str(user.id)
-        else:
-            message.reply_text("لا يمكنني العثور على المستخدم")
-            return
-
-    
-    ToM= ChatPrivileges(
-                    can_manage_chat=True,
-                    can_delete_messages=True,
-                    can_manage_video_chats=True,
-                    can_restrict_members=True,
-                    can_promote_members=False,
-                    can_change_info=False,
-                    can_post_messages=True,
-                    can_edit_messages=True,
-                    can_invite_users=True,
-                    can_pin_messages=False,
-                    is_anonymous=False
-                )
-    chat_id = message.chat.id
-    client.promote_chat_member(chat_id, user_id, ToM)
-    message.reply(f"⎉︙تم رفع {user_id} ادمن بنجاح")
-    
-
-
-
-@app.on_message(filters.command("رفع مشرف", "رفع ادمن") & filters.group)
-def promote_g_admin(client, message):
-    if message.reply_to_message and message.reply_to_message.from_user:
-        target = message.reply_to_message.from_user.id
-        user_id = str(target)
-    elif message.reply_to_message is None:
-        target = message.text.split()[2]
-        user = app.get_users(target)
-        if user:
-            user_id = str(user.id)
-        else:
-            message.reply_text("لا يمكن العثور على المستخدم")
-            return
-    else:
-        target = message.text.split()[1].strip("@")
-        user = app.get_users(target)
-        if user:
-            user_id = str(user.id)
-        else:
-            message.reply_text("لا يمكن العثور على المستخدم")
-            return
-
-    tom_id = message.from_user.id
-    chat_id = message.chat.id
-    ToM= ChatPrivileges(
-                    can_manage_chat=True,
-                    can_delete_messages=True,
-                    can_manage_video_chats=True,
-                    can_restrict_members=True,
-                    can_promote_members=True,
-                    can_change_info=True,
-                    can_post_messages=False,
-                    can_edit_messages=False,
-                    can_invite_users=True,
-                    can_pin_messages=True,
-                    is_anonymous=False
-                )
-    tooom = client.get_chat_members(chat_id, filter=ChatMembersFilter.ADMINISTRATORS)
-    for tom in tooom:
-    	if tom.user.id == tom_id and (tom.status == enums.ChatMemberStatus.OWNER or tom.status == enums.ChatMemberStatus.ADMINISTRATOR):
-    		client.promote_chat_member(chat_id, user_id, ToM)
-    		message.reply(f"⎉︙تم رفع {user_id} ادمن بنجاح")
-    	#else:
-#    		message.reply("يجب ان تكون مشرف لإستخدام الامر")
- 	 
-
-	 
-
+         id[usr.id].remove(query.from_user.mention)
+    idd = len(id[usr.id])
+    await query.edit_message_text(f"**name : {usr.first_name}\nid : {usr.id}\nuser : [@{usr.username}]\nbio : {usr.bio}**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{idd} 🤍", callback_data=f"heart{usr.id}")]]))

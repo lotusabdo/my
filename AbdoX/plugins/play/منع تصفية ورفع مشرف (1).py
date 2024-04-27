@@ -9,7 +9,10 @@ from AbdoX import app
 
 
 
-@Client.on_message(command(["فتح الايدي", "تفعيل الايدي"], "")& filters.group)
+@app.on_message(
+    command(["فتح الايدي"])
+    & filters.group
+  
 async def iddopen(client: Client, message):
    get = await client.get_chat_member(message.chat.id, message.from_user.id)
    if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:

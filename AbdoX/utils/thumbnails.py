@@ -1,149 +1,119 @@
-import asyncio
 import os
-import random
 import re
 import textwrap
 import aiofiles
 import aiohttp
-from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
-                 ImageFont, ImageOps)
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 from youtubesearchpython.__future__ import VideosSearch
-import numpy as np
+from AbdoX import app
 from config import YOUTUBE_IMG_URL
+import logging
 
+# إعداد تسجيل الدخول
+logging.basicConfig(level=logging.INFO)
 
-def make_col():
-    return (random.randint(0,255),random.randint(0,255),random.randint(0,255))
+def change_image_size_fill(max_width, max_height, image):
+    return ImageOps.fit(image, (max_width, max_height), Image.LANCZOS)
 
+def enhance_image(image):
+    enhancer = ImageEnhance.Contrast(image)
+    image = enhancer.enhance(0.5)  # زيادة التباين قليلاً
+    enhancer = ImageEnhance.Sharpness(image)
+    image = enhancer.enhance(2)  # زيادة الحدة
+    return image
 
-def changeImageSize(maxWidth, maxHeight, image):
-    widthRatio = maxWidth / image.size[0]
-    heightRatio = maxHeight / image.size[1]
-    newWidth = int(widthRatio * image.size[0])
-    newHeight = int(heightRatio * image.size[1])
-    newImage = image.resize((newWidth, newHeight))
-    return newImage
+async def fetch_video_data(video_id):
+    url = f"https://www.youtube.com/watch?v={video_id}"
+    results = VideosSearch(url, limit=1)
+    result = (await results.next())["result"][0]
+    video_data = {
+        "title": re.sub(r"\W+", " ", result.get("title", "Unsupported Title")).title(),
+        "duration": result.get("duration", "Unknown Mins"),
+        "thumbnail": result["thumbnails"][0]["url"].split("?")[0],
+        "views": result["viewCount"].get("short", "Unknown Views"),
+        "channel": result["channel"].get("name", "Unknown Channel")
+    }
+    return video_data
 
-def truncate(text):
-    list = text.split(" ")
-    text1 = ""
-    text2 = ""    
-    for i in list:
-        if len(text1) + len(i) < 30:        
-            text1 += " " + i
-        elif len(text2) + len(i) < 30:       
-            text2 += " " + i
+async def download_image(url, file_path):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as resp:
+            if resp.status == 200:
+                async with aiofiles.open(file_path, mode="wb") as f:
+                    await f.write(await resp.read())
 
-    text1 = text1.strip()
-    text2 = text2.strip()     
-    return [text1,text2]
+def overlay_text(draw, text, position, font, fill="white"):
+    draw.text(
+        position,
+        text,
+        fill=fill,
+        font=font,
+    )
 
-async def get_thumb(videoid):
+async def get_owner_image():
+    return "AbdoX/assets/mizo.png"
+
+async def get_thumb(video_id):
+    cache_path = f"cache/{video_id}.png"
+    if os.path.isfile(cache_path):
+        return cache_path
+
     try:
-        if os.path.isfile(f"cache/{videoid}.jpg"):
-            return f"cache/{videoid}.jpg"
+        video_data = await fetch_video_data(video_id)
+        thumbnail_url = video_data["thumbnail"]
+        temp_thumb_path = f"cache/thumb_{video_id}.png"
+        
+        await download_image(thumbnail_url, temp_thumb_path)
+        owner_image_path = await get_owner_image()
+        
+        youtube_image = Image.open(temp_thumb_path)
+        resized_image = change_image_size_fill(1280, 720, youtube_image).convert("RGBA")
+        enhanced_image = enhance_image(resized_image)
+        background = enhanced_image.filter(ImageFilter.BoxBlur(15))
+        background = ImageEnhance.Brightness(background).enhance(0.6)
+        
+        owner_image = Image.open(owner_image_path)
+        owner_image.thumbnail((500, 500), Image.LANCZOS)
+        owner_image_with_border = ImageOps.expand(owner_image, border=15, fill="white")
+        
+        background.paste(owner_image_with_border, (50, 100), owner_image_with_border)  # لصق صورة المالك في المكان المرغوب مع قناة ألفا
+        
+        draw = ImageDraw.Draw(background)
+        
+        # تحميل الخط لكل النصوص
+        font_path = "AbdoX/assets/font2.ttf"  # المسار للخط
+        font2_size = 30  # حجم الخط الجديد
+        font2 = ImageFont.truetype(font_path, font2_size)  # خط جديد
+        
+        # وضع النص "MaZen PlAYiNg" بخط أكبر وحواف بيضاء
+        text = "MaZen PlAYiNg"
+        position = (600, 150)
+        text_color = "white"
+        outline_color = "white"
+        outline_width = 1
+        font_large = ImageFont.truetype(font_path, 70)  # حجم الخط الكبير
+        draw.text(position, text, font=font_large, fill=text_color)
+        draw.text((position[0] - outline_width, position[1]), text, font=font_large, fill=outline_color)
+        draw.text((position[0] + outline_width, position[1]), text, font=font_large, fill=outline_color)
+        draw.text((position[0], position[1] - outline_width), text, font=font_large, fill=outline_color)
+        draw.text((position[0], position[1] + outline_width), text, font=font_large, fill=outline_color)
+        
+        # حساب العرض الأقصى للعنوان ليتناسب مع الصورة
+        max_width_title = 550
 
-        url = f"https://www.youtube.com/watch?v={videoid}"
-        if 1==1:
-            results = VideosSearch(url, limit=1)
-            for result in (await results.next())["result"]:
-                try:
-                    title = result["title"]
-                    title = re.sub("\W+", " ", title)
-                    title = title.title()
-                except:
-                    title = "Unsupported Title"
-                try:
-                    duration = result["duration"]
-                except:
-                    duration = "Unknown Mins"
-                thumbnail = result["thumbnails"][0]["url"].split("?")[0]
-                try:
-                    views = result["viewCount"]["short"]
-                except:
-                    views = "Unknown Views"
-                try:
-                    channel = result["channel"]["name"]
-                except:
-                    channel = "Unknown Channel"
-
-            async with aiohttp.ClientSession() as session:
-                async with session.get(f"http://img.youtube.com/vi/{videoid}/maxresdefault.jpg") as resp:
-                    if resp.status == 200:
-                        f = await aiofiles.open(
-                            f"cache/thumb{videoid}.jpg", mode="wb"
-                        )
-                        await f.write(await resp.read())
-                        await f.close()
-
-            youtube = Image.open(f"cache/thumb{videoid}.jpg")
-            image1 = changeImageSize(1280, 720, youtube)
-            image2 = image1.convert("RGBA")
-            background = image2.filter(filter=ImageFilter.BoxBlur(30))
-            enhancer = ImageEnhance.Brightness(background)
-            background = enhancer.enhance(0.6)
-            image2 = background
-                                                                                            
-            circle = Image.open("AbdoX/assets/circle.png")
-
-            # changing circle color
-            im = circle
-            im = im.convert('RGBA')
-            color = make_col()
-
-            data = np.array(im)
-            red, green, blue, alpha = data.T
-
-            white_areas = (red == 255) & (blue == 255) & (green == 255)
-            data[..., :-1][white_areas.T] = color
-
-            im2 = Image.fromarray(data)
-            circle = im2
-            # done
-
-            image3 = image1.crop((280,0,1000,720))
-            lum_img = Image.new('L', [720,720] , 0)
-            draw = ImageDraw.Draw(lum_img)
-            draw.pieslice([(0,0), (720,720)], 0, 360, fill = 255, outline = "white")
-            img_arr = np.array(image3)
-            lum_img_arr = np.array(lum_img)
-            final_img_arr = np.dstack((img_arr,lum_img_arr))
-            image3 = Image.fromarray(final_img_arr)
-            image3 = image3.resize((600,600))
-            
-
-            image2.paste(image3, (50,70), mask = image3)
-            image2.paste(circle, (0,0), mask = circle)
-
-            # fonts
-            font1 = ImageFont.truetype('AbdoX/assets/font.ttf', 30)
-            font2 = ImageFont.truetype('AbdoX/assets/font2.ttf', 70)
-            font3 = ImageFont.truetype('AbdoX/assets/font2.ttf', 40)
-            font4 = ImageFont.truetype('AbdoX/assets/font2.ttf', 35)
-
-            image4 = ImageDraw.Draw(image2)
-            image4.text((10, 10), "AbdoX Music", fill="white", font = font1, align ="left") 
-            image4.text((670, 150), "AbdoX PLAYING", fill="white", font = font2, stroke_width=2, stroke_fill="white", align ="left") 
-
-            # title
-            title1 = truncate(title)
-            image4.text((670, 300), text=title1[0], fill="white", stroke_width=1, stroke_fill="white",font = font3, align ="left") 
-            image4.text((670, 350), text=title1[1], fill="white", stroke_width=1, stroke_fill="white", font = font3, align ="left") 
-
-            # description
-            views = f"Views : {views}"
-            duration = f"Duration : {duration} Mins"
-            channel = f"Channel : {channel}"
-
-            image4.text((670, 450), text=views, fill="white", font = font4, align ="left") 
-            image4.text((670, 500), text=duration, fill="white", font = font4, align ="left") 
-            image4.text((670, 550), text=channel, fill="white", font = font4, align ="left")
-            
-            image2 = ImageOps.expand(image2,border=20,fill=make_col())
-            image2 = image2.convert('RGB')
-            image2.save(f"cache/{videoid}.jpg")
-            file = f"cache/{videoid}.jpg"
-            return file
+        # وضع عنوان الفيديو بالخط الشائع
+        title_lines = textwrap.wrap(video_data["title"], width=40)
+        for i, line in enumerate(title_lines):
+            overlay_text(draw, line, (600, 280 + 40 * i), font2)  # استخدام الخط الجديد
+        
+        # وضع المعلومات الإضافية (المشاهدات، المدة، القناة) بخط font2
+        overlay_text(draw, f"Views : {video_data['views'][:23]}", (600, 450), font2)
+        overlay_text(draw, f"Duration : {video_data['duration'][:23]} Mins", (600, 490), font2)
+        overlay_text(draw, f"Channel : {video_data['channel']}", (600, 530), font2)
+        
+        os.remove(temp_thumb_path)
+        background.save(cache_path)
+        return cache_path
     except Exception as e:
-        print(e)
+        logging.error(f"Error in get_thumb: {e}")
         return YOUTUBE_IMG_URL

@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 from AbdoX.utils.database import get_assistant
 import config
-from AbdoX import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from AbdoX import Apple, Resso, Spotify, Telegram, YouTube, app
 from AbdoX.core.call import Alina
 from AbdoX.misc import SUDOERS
 from AbdoX.utils import seconds_to_min, time_to_seconds

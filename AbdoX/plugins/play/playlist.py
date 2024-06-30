@@ -17,9 +17,6 @@ from pyrogram.types import (InlineKeyboardButton, CallbackQuery,
 from AbdoX.utils import close_markup
 from AbdoX import Carbon, app
 from AbdoX.utils.decorators.language import language, languageCB
-from AbdoX.utils.inline.playlist import (botplaylist_markup,
-                                              get_playlist_markup,
-                                              warning_markup)
 from AbdoX.utils.pastebin import AlinaBin
 import time
 import asyncio

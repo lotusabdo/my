@@ -11,7 +11,7 @@ from pyrogram import filters
 from pyrogram import Client
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
-from AbdoX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AbdoX import (Apple, Resso, Spotify, Telegram, YouTube, app)
 from AbdoX import app
 from telegraph import upload_file
 from asyncio import gather

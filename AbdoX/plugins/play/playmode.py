@@ -1,3 +1,4 @@
+from AbdoX.plugins.play.filters import command
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
@@ -8,7 +9,7 @@ from AbdoX.utils.inline.settings import playmode_users_markup
 from config import BANNED_USERS
 
 
-@app.on_message(filters.command(["playmode" , "وضع تشغيل " ] ,prefixes=["/", "!", "%", ",", "", ".", "@", "#"]) & filters.group & ~BANNED_USERS)
+@app.on_message(command(["الاعدادات", "وضع شغل"]) & filters.group & ~BANNED_USERS)
 @language
 async def playmode_(client, message: Message, _):
     playmode = await get_playmode(message.chat.id)

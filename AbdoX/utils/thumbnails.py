@@ -51,7 +51,7 @@ def overlay_text(draw, text, position, font, fill="white"):
     )
 
 async def get_owner_image():
-    return "AbdoX/assets/mizo.png"
+    return "AbdoX/assets/abdo.png"
 
 async def get_thumb(video_id):
     cache_path = f"cache/{video_id}.png"
@@ -86,7 +86,7 @@ async def get_thumb(video_id):
         font2 = ImageFont.truetype(font_path, font2_size)  # خط جديد
         
         # وضع النص "MaZen PlAYiNg" بخط أكبر وحواف بيضاء
-        text = "MaZen PlAYiNg"
+        text = "SaViO PlAYiNg"
         position = (600, 150)
         text_color = "white"
         outline_color = "white"

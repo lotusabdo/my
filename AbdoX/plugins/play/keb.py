@@ -9,21 +9,23 @@ from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, Message, ChatJoinRequest
 
 
-@app.on_message(filters.regex("^/SaVlO"), group=39)
+@app.on_message(filters.regex("^/start"), group=39)
 async def cpanel(_, message: Message):             
-        text = "اهلا بك بك عزيزي العضو اليك كيب الاعضاء⚡"
+        text = "🧑🏻‍✈️︙اهلا بك بك عزيزي العضو ♥️**\n\n**⤵️︙ اليـكـ كيب الاعضاء الخاص بسورس بودا"
         kep = ReplyKeyboardMarkup([
-[" مبرمج السورس", "مطور السورس"],
-["السورس","المطور"],
-["الالعاب"],
+[" المطور", "مطور السورس"],
+["السورس","يـوتيوب "],
+["اقتباس","استوري"],
 ["انمي","متحركه"],
 ["تويت", "صراحه"],
-["الاوامر"],
+["نكته","احكام"],
+[" لو خيروك","انصحني"],
 ["قران","نقشبندي"],
-["سوال","اقتباس"],
-["استوريهات"],
+["اذكار","كتابات"],
+["حروف","بوت"],
+["غنيلي","سوال"],
 ["تلاوات","عبدالباسط"],
-["صور بنات","صور ولاد"],
+["افاتار بنات","افاتار شباب"],
 ["❎ ¦ حذف الكيبورد"]], resize_keyboard=True)
         await message.reply(
               text=text,
@@ -50,7 +52,7 @@ def reply_to_HEY(Client, message):
         reply_markup=InlineKeyboardMarkup(
             [
             [
-                InlineKeyboardButton("SoUrCe SaVlO", url=f"https://t.me/l2_2Y"),
+                InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐄 𝐁𝐎𝐃𝐀", url=f"https://t.me/l2_2Y"),
             ]
          ]
      )

@@ -7,6 +7,7 @@ from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from AbdoX.core.call import Zelzaly
 from AbdoX.utils.database import *
 from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError,AlreadyJoinedError)
+
 @app.on_message(filters.regex("^مين في الكول$"))
 async def strcall(client, message):
     assistant = await group_assistant(Zelzaly,message.chat.id)
@@ -82,34 +83,3 @@ async def brah2(client, message):
             await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {day[0]} ايام **")  
         else:
             await message.reply(f"**- تم إنهاء مكالمة الفيديو مدتها {day[0]} يوم**")
-@Client.on_message(filters.command("رتبتي", ""))
-async def bt(client: Client, message: Message):
-  try:
-     if not message.chat.type == enums.ChatType.PRIVATE:
-      if await joinch(message):
-            return
-     userr = message.from_user
-     bot_username = client.me.username
-     dev = await get_dev(bot_username)
-     if userr.username in OWNER :
-         await message.reply_text("**♪ رتبتك هي : مطور السورس  💎 .**")
-         return
-     if userr.username in ["EU_TM"]:
-         await message.reply_text("**♪ رتبتك هي : المطور كابوس  💎 .**")
-         return
-     if userr.username in ["EU_TM"]:
-         await message.reply_text("**♪ رتبتك هي : المطور كابوس 💎 .**")
-         return
-     if userr.id == dev:
-        return await message.reply_text("**♪ رتبتك هي : المطور الاساسي  💎 .**")
-     user = await message._client.get_chat_member(message.chat.id, message.from_user.id)
-     if user.status == enums.ChatMemberStatus.OWNER:
-         await message.reply_text("**♪ رتبتك هي : المالك  💎 .**")
-         return
-     if user.status == enums.ChatMemberStatus.ADMINISTRATOR:
-         await message.reply_text("**♪ رتبتك هي : الادمن  💎 .**")
-         return 
-     else:
-         await message.reply_text("**♪ رتبتك هي : العضو  💎 .**")
-  except:
-    pass

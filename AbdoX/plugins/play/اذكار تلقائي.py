@@ -61,7 +61,7 @@ async def idljjopen(client, message):
 
 
 @app.on_message(
-    command(["اذكار","اذكار ✯"])
+    command(["اذكار"])
     
 )
 async def idjjdd(client, message):

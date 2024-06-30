@@ -45,7 +45,7 @@ def get_file_id(msg: Message):
                 setattr(obj, "message_type", message_type)
                 return obj
 
-@app.on_message(filters.command(["المطور","مطور"], ""))
+@app.on_message(filters.command(["المطور","مطور "], ""))
 async def khfzss(client: Client, message: Message):
     usrr = await client.get_chat(OWNER_ID)
     name = usrr.first_name
@@ -53,7 +53,7 @@ async def khfzss(client: Client, message: Message):
     id = usrr.id
     username = usrr.username
     async for photo in client.get_chat_photos(OWNER_ID, limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""𖥻 DeVeLoPer BoT Music .\n\n𖥻 UsEr : @{username} \n𖥻 Id : {id} \n𖥻 BiO : {bio}""", 
+                    await message.reply_photo(photo.file_id,       caption=f"""مــعلومــات مــطور الــبـوت : \n\n name: {name} \n\n usre: @{username} \n\n id: {id} \n\n bio: {bio} \n\n 𝐒𝐎𝐔𝐑𝐂𝐄 𝐁𝐎𝐃𝐀""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -63,25 +63,12 @@ async def khfzss(client: Client, message: Message):
             ]
         ),
     )                    
-                
+                    
 
-                    chat = message.chat.id
-    gti = message.chat.title
-    chatusername = f"@{message.chat.username}"
-    link = await app.export_chat_invite_link(chat)
-    user = await client.get_users(message.from_user.id)
-    user_id = message.from_user.id
-    user_ab = message.from_user.username
-    user_name = message.from_user.first_name
-    buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
-    reply_markup = InlineKeyboardMarkup(buttons)
-    await app.send_message(OWNER_ID, f"<b>⌯ قام {message.from_user.mention}\n</b>"
-                                     f"<b>⌯ بمناداتك عزيزي المطور\n</b>"
-                                     f"<b>⌯ الأيدي {user_id}\n</b>"
-                                     f"<b>⌯ اليوزر @{user_ab}\n</b>"
-                                     f"<b>⌯ ايدي المجموعة {message.chat.id}\n</b>"
-                                     f"<b>⌯ يوزر المجموعه {chatusername}</b>",
-                                     reply_markup=reply_markup)
+                    sender_id = message.from_user.id
+                    sender_name = message.from_user.first_name
+                    await app.send_message(OWNER_ID, f"الواد {message.from_user.mention} دا بينادي عليك \n\n الايدي بتاعه : {sender_id} \n\n اسمه : {sender_name}\n\n مجموعه : {chatusername}")
+                    return await app.send_message(config.LOG_GROUP_ID, f"الواد {message.from_user.mention} دا بينادي عليك \n\n الايدي بتاعه : {sender_id} \n\n اسمه : {sender_name}\n\n مجموعه: {chatusername}")
 
 @app.on_message(filters.command(["تحويل لصوره"], ""))
 async def elkatifh(client: Client, message: Message):

@@ -79,7 +79,7 @@ async def almortagel(client: Client, message: Message):
     url = f"https://t.me/telawatnader/{rl}"
     await client.send_voice(message.chat.id,url,caption="🥹♥ ¦ تـم اختيـار الشيخ عبدالباسط لـك")
     
-@app.on_message(filters.command(["استوريهات"], ""))
+@app.on_message(filters.command(["استوري", "استوريهات. 🥹"], ""))
 async def almortagel(client: Client, message: Message):
     rl = random.randint(2,148)
     url = f"https://t.me/yoipopl/{rl}"

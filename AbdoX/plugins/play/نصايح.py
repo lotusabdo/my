@@ -85,7 +85,7 @@ txt = [
         
 
 
-@app.on_message(command(["انصحني"]))
+@app.on_message(command(["انصحني","انصحني. 🥲"]))
 
 async def anshny(client: Client, message: Message):
 

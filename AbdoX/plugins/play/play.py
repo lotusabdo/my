@@ -34,7 +34,7 @@ from config import BANNED_USERS, lyrical
             "فيديو",
             "/play",
             "/vplay",
-            "/cplay",
+            "فيد",
             "/cvplay",
             "/playforce",
             "/vplayforce",

@@ -15,7 +15,6 @@ from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton, CallbackQuery,
                             InlineKeyboardMarkup, Message)
 from AbdoX.utils import close_markup
-from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
 from AbdoX import Carbon, app
 from AbdoX.utils.decorators.language import language, languageCB
 from AbdoX.utils.inline.playlist import (botplaylist_markup,

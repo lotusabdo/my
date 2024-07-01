@@ -12,7 +12,6 @@ from youtubesearchpython.__future__ import VideosSearch
 import config
 from AbdoX import app
 from AbdoX.misc import _boot_
-from AbdoX.utils import bot_up_time
 from AbdoX.utils.database import get_served_chats, get_served_users, get_sudoers
 from AbdoX.utils import bot_sys_stats
 from AbdoX.utils.database import (
@@ -27,7 +26,6 @@ from AbdoX.utils.decorators.language import LanguageStart
 from AbdoX.utils.formatters import get_readable_time
 from AbdoX.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
-from strings import get_string
 from AbdoX.utils.database import get_assistant
 from time import time
 import asyncio

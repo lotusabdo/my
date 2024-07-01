@@ -45,7 +45,7 @@ def get_file_id(msg: Message):
                 setattr(obj, "message_type", message_type)
                 return obj
 
-@app.on_message(filters.command(["المطور","مطور"], ""))
+@app.on_message(filters.command(["المطور"], ""))
 async def khfzss(client: Client, message: Message):
     usrr = await client.get_chat(OWNER_ID)
     name = usrr.first_name

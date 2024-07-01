@@ -25,7 +25,7 @@ def private_panel(_):
         ],
         
         [
-            InlineKeyboardButton(text="- 𝐃 𝐄 𝐕 ↺", user_id=config.OWNER_ID"),
+            InlineKeyboardButton(text="- 𝐃 𝐄 𝐕 ↺", url=f"https://t.me/Q6_6C"),
             InlineKeyboardButton(text="- 𝐆 𝐑 𝐎 𝐔 𝐏 ↺", url=f"https://t.me/Q_CR_3"), 
         ],
         [

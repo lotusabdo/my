@@ -3,16 +3,13 @@ from pyrogram.types import InlineKeyboardButton
 import config
 from AbdoX import app
 
-
 def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_1"], url=f"https://t.me/{app.username}?startchannel=true",
-            )
-        ],
-        [
-            InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
+                text="اضغط لاضافتي لمجموعتك✅", url=f"https://t.me/{app.username}?startgroup=true"
+            ),
+            InlineKeyboardButton(text="- 𝐆 𝐑 𝐎 𝐔 𝐏 ↺", url= "https://t.me/Q_CR_3"),
         ],
     ]
     return buttons
@@ -22,21 +19,18 @@ def private_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"https://t.me/l2_2Y",
+                text="اضغط لاضافتي لمجموعتك✅",
+                url=f"https://t.me/{app.username}?startgroup=true",
             )
         ],
+        
         [
-            InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
-            InlineKeyboardButton(text=_["S_B_5"], user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="- 𝐃 𝐄 𝐕 ↺", user_id=config.OWNER_ID"),
+            InlineKeyboardButton(text="- 𝐆 𝐑 𝐎 𝐔 𝐏 ↺", url=f"https://t.me/Q_CR_3"), 
         ],
         [
-            InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL)
-        ],
-        [
-            InlineKeyboardButton(
-                text=_["S_B_1"],
-                url=f"https://t.me/{app.username}?startchannel=true"),
+            
+            InlineKeyboardButton(text="- 𝐒 𝐎 𝐔 𝐑 𝐂 𝐄 ↺", url=f"https://t.me/l2_2Y") , 
         ],
     ]
     return buttons

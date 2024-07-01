@@ -2,7 +2,6 @@ from AbdoX import app
 from AbdoX.misc import SUDOERS
 from pyrogram import *
 from pyrogram.types import *
-from AbdoX.utils.admin_check import admin_filter
 from pyrogram import Client, filters
 from pyrogram import enums
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus , ChatType

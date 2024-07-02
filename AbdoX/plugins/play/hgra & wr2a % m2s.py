@@ -94,7 +94,7 @@ def choose(client, callback_query):
                         [InlineKeyboardButton("حجرة", callback_data="حجرة"),
                          InlineKeyboardButton("ورقة", callback_data="ورقة"),
                          InlineKeyboardButton("مقص", callback_data="مقص")],
-                         [InlineKeyboardButton("‹ 𝖲𝗈𝗎𝗋𝖼𝖾 𝖤𝗂𝗋𝗍𝗁𝗈𝗇 ›", url="https://t.me/eirthon")]
+                         [InlineKeyboardButton("‹ 𝖲𝗈𝗎𝗋𝖼𝖾 SaViO ›", url="https://t.me/l2_2Y")]
                     ]
                 )
             )

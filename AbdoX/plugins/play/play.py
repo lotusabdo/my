@@ -30,6 +30,7 @@ from config import BANNED_USERS, lyrical
     command(
         [
             "شغل",
+            "فيد",
             "تشغيل",
             "فيديو",
             "/play",

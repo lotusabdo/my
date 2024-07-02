@@ -58,7 +58,7 @@ MazenMusic_responses = [
        
 ]
 
-@app.on_message(filters.command(["اعلان البوت"], ""), group=39)
+@app.on_message(filters.command(["ترويج عام"], ""), group=39)
 async def MazenMusic_bot(client, message):
     global name
     bot_username = (await app.get_me()).username

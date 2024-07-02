@@ -72,11 +72,11 @@ async def command_buttons(client: Client, message: Message):
             button_text = permission_name + " ✅" if getattr(chat_permissions, permission_key) else permission_name + " ❌"
             boolean = "-True" if getattr(chat_permissions, permission_key) else "-False"
             keyboard.append([InlineKeyboardButton(button_text, callback_data=f"{permission_key}{boolean}-permissions")])
-        keyboard.append([InlineKeyboardButton("⚡️اغلاق⚡️", callback_data="permission-save")])
+        keyboard.append([InlineKeyboardButton("اغلاق", callback_data="permission-save")])
         reply_markup = InlineKeyboardMarkup(keyboard)
         await message.reply_text("قم بإختيار الصلاحيات المطلوبة :", reply_markup=reply_markup)
     else:
-        await message.reply_text("**مفكر نفسك ادمن ياروح امك🗿**")
+        await message.reply_text("مفكر نفسك ادمن ياروح امك")
 
 @app.on_callback_query(filters.regex("permissions"), group=200)
 async def handle_callback_query(client: Client, callback_query: CallbackQuery):
@@ -106,7 +106,7 @@ async def handle_callback_query(client: Client, callback_query: CallbackQuery):
             await callback_query.edit_message_text("**تم حفظ الإعدادات ✅️**")
             await callback_query.message.delete()
     else:
-        await callback_query.answer("لما تكبر ياصغنن هنفذلك الامر ده حاضر 🗿", show_alert=True)
+        await callback_query.answer("لما تكبر ياصغنن هنفذلك الامر ده حاضر ", show_alert=True)
 
 @app.on_message(filters.all, group=300)
 async def check_permissions(client: Client, message: Message):

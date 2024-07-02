@@ -1,3 +1,4 @@
+
 import asyncio
 
 import random
@@ -10,9 +11,6 @@ from pyrogram.types import (InlineKeyboardButton,
 
 
 from pyrogram import filters, Client
-
-
-
 
 
 txt = [
@@ -75,7 +73,7 @@ txt = [
         
 
 
-@app.on_message(filters.command(["حروف","حرف ✯"], ""))
+@app.on_message(filters.command(["حروف","احرف"], ""))
 
 async def ahrof(client: Client, message: Message):
 
@@ -84,3 +82,4 @@ async def ahrof(client: Client, message: Message):
       await message.reply(
 
         f"{a}")
+        

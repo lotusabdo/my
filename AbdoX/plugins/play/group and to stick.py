@@ -7,8 +7,8 @@ import aiohttp
 from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
-from abdoX import (Apple, Resso, Spotify, Telegram, YouTube, app)
-from abdoX import app
+from AbdoX import (Apple, Resso, Spotify, Telegram, YouTube, app)
+from AbdoX import app
 from asyncio import gather
 
 @app.on_message(

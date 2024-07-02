@@ -5,7 +5,6 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from config import *
 from AbdoX  import app 
-zone = timezone("Africa/Cairo")
 
 s = Session()
 @app.on_message(filters.regex(r"^(مواقيت صلاة|مواقيت صلاه|صلوات)"))

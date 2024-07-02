@@ -48,7 +48,7 @@ def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [InlineKeyboardButton("اضغط للعب", callback_data="join")],
-                    [InlineKeyboardButton("‹ 𝖲𝗈𝗎𝗋𝖼𝖾 𝖤𝗂𝗋𝗍𝗁𝗈𝗇 ›", url="https://t.me/eirthon")]
+                    [InlineKeyboardButton("‹ 𝖲𝗈𝗎𝗋𝖼𝖾 SaVio ›", url="https://t.me/l2_2Y")]
                 ]
             )
         )

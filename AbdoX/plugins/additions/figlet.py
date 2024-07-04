@@ -1,6 +1,5 @@
 from pyrogram import filters
 import asyncio
-import pyfiglet 
 from random import choice
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
 from pyrogram.handlers import MessageHandler

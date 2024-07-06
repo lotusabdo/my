@@ -8,7 +8,6 @@ from youtubesearchpython.__future__ import VideosSearch
 import config
 from AbdoX import app
 from AbdoX.misc import _boot_
-from AbdoX.plugins.sudo.sudoers import sudoers_list
 from AbdoX.utils.database import (
     add_served_chat,
     add_served_user,

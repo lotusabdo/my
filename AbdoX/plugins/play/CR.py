@@ -22,23 +22,20 @@ from random import  choice, randint
 )
 async def huhh(client: Client, message: Message):
     await message.reply_video(
-        video=f"https://t.me/tfdhgccv/144",
-        caption=f"- 𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐒𝐚𝐯𝐥𝐨 𝐌𝐮𝐬𝐢𝐜 .",
+        video=f"https://t.me/c/2196024868/30",
+        caption=f"- 𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐋𝐨𝐭𝐮𝐬 𝐌𝐮𝐬𝐢𝐜 .",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
                    "𖥻 𝐆 𝐑 𝐎 𝐔 𝐏 .", url=f"https://t.me/C7_7M"), 
                  InlineKeyboardButton(
-                   "𖥻 𝐒 𝐀 𝐕 𝐈 𝐎 .",  url=f"https://t.me/l2_2Y"), 
+                   "𖥻 𝐒 𝐎 𝐔 𝐑 𝐂 𝐄 .",  url=f"https://t.me/l2_2Y"), 
                  
              ],[ 
             InlineKeyboardButton(
                         "𖥻 𝐀 𝐁 𝐃 𝐎 𝐨 .", url=f"https://t.me/II_U_6"), 
                       
-             ],[ 
-            InlineKeyboardButton(
-                      "𖥻 𝐆 𝐑 𝐀 𝐙 𝐘 .", url=f"https://t.me/CRAZ_UP"), 
                       
              ],[ 
                   InlineKeyboardButton(
@@ -79,28 +76,4 @@ async def deev(client: Client, message: Message):
      except:
         pass
 
-@app.on_message(filters.command(["مبرمج السورس","كريزي"], ""), group=73) 
-async def deev(client: Client, message: Message):
-     user = await client.get_chat(chat_id="CRAZ_UP")
-     name = user.first_name
-     username = user.username 
-     bio = user.bio
-     user_id = user.id
-     photo = user.photo.big_file_id
-     photo = await client.download_media(photo)
-     link = f"https://t.me/{message.chat.username}"
-     title = message.chat.title if message.chat.title else message.chat.first_name
-     chat_title = f"User : {message.from_user.mention} \nChat Name : {title}" if message.from_user else f"Chat Name : {message.chat.title}"
-     try:
-      await client.send_message(username, f"هناك شخص بالحاجه اليك عزيزي المبرمج كريزي\n{chat_title}\nChat Id : `{message.chat.id}`",
-      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{title}", url=f"{link}")]]))
-     except:
-       pass
-     await message.reply_photo(
-     photo=photo,
-     caption=f"𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 𝙽𝚊𝚖𝚎 : {name} \n𝚍𝚎𝚟 𝚞𝚜𝚎𝚛 𝚗𝚊𝚖𝚎 : @{username}\n{bio}",
-     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{name}", user_id=f"{user_id}")]]))
-     try:
-       os.remove(photo)
-     except:
-        pass
+

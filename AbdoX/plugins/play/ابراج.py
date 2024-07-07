@@ -56,9 +56,9 @@ async def abrag(c: Client, m: Message):
 
         [InlineKeyboardButton("القوس", callback_data="elqoos " + str(m.from_user.id))],
 
-         [InlineKeyboardButton("𖥻 𝐆 𝐑 𝐎 𝐔 𝐏 .", url=f"https://t.me/Q_CR_3")],
+         [InlineKeyboardButton("𖥻 𝐆 𝐑 𝐎 𝐔 𝐏 .", url=f"https://t.me/C7_7M")],
 
-         [InlineKeyboardButton("𖥻 𝐒 𝐀 𝐕 𝐈 𝐎 .", url=f"https://t.me/l2_2Y")],
+         [InlineKeyboardButton("𖥻 𝐋 𝐎 𝐓 𝐔 𝐒 .", url=f"https://t.me/l2_2Y")],
 
         [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{app.username}?startgroup=new")],
 

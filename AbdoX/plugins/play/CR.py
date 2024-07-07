@@ -78,7 +78,7 @@ async def deev(client: Client, message: Message):
 
 @app.on_message(filters.command(["مبرمج السورس"], ""), group=73) 
 async def deev(client: Client, message: Message):
-     user = await client.get_chat(chat_id="II_U_6")
+     user = await client.get_chat(chat_id="Y_o_V")
      name = user.first_name
      username = user.username 
      bio = user.bio

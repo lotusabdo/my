@@ -23,7 +23,7 @@ from config import BANNED_USERS
 from strings import get_string
 
 
-@app.on_message(filters.command("start", prefix) & filters.user(developer))
+@app.on_message(filters.command("start") & filters.user(developer))
 
 async def startsudo(c: Client, m: Message):
 

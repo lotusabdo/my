@@ -23,117 +23,222 @@ from config import BANNED_USERS
 from strings import get_string
 
 
-@app.on_message(filters.command(["sta"]) & filters.private & ~BANNED_USERS)
-@LanguageStart
-async def start_pm(client, message: Message, _):
-    await add_served_user(message.from_user.id)
-    if len(message.text.split()) > 1:
-        name = message.text.split(None, 1)[1]
-        if name[0:4] == "help":
-            keyboard = help_pannel(_)
-            return await message.reply_photo(
-                photo=config.START_IMG_URL,
-                caption=_["help_1"].format(config.SUPPORT_CHANNEL),
-                reply_markup=keyboard,
-            )
-        if name[0:3] == "sud":
-            await sudoers_list(client=client, message=message, _=_)
-            return
-        if name[0:3] == "inf":
-            m = await message.reply_text("🔎")
-            query = (str(name)).replace("info_", "", 1)
-            query = f"https://www.youtube.com/watch?v={query}"
-            results = VideosSearch(query, limit=1)
-            for result in (await results.next())["result"]:
-                title = result["title"]
-                duration = result["duration"]
-                views = result["viewCount"]["short"]
-                thumbnail = result["thumbnails"][0]["url"].split("?")[0]
-                channellink = result["channel"]["link"]
-                channel = result["channel"]["name"]
-                link = result["link"]
-                published = result["publishedTime"]
-            searched_text = _["start_6"].format(
-                title, duration, views, published, channellink, channel, app.mention
-            )
-            key = InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(text=_["S_B_8"], url=link),
-                    ],
-                ]
-            )
-            await m.delete()
-            await app.send_photo(
-                chat_id=message.chat.id,
-                photo=thumbnail,
-                caption=searched_text,
-                reply_markup=key,
-            )
-    else:
-        out = private_panel(_)
-        await message.reply_photo(
-            photo=config.START_IMG_URL,
-            caption=_["start_2"].format(message.from_user.mention, app.mention),
-            reply_markup=InlineKeyboardMarkup(out),
+@app.on_message(filters.command("start", prefix) & filters.user(developer))
+
+async def startsudo(c: Client, m: Message):
+
+    await confirm_user(c, m)
+
+    if m.chat.type == enums.ChatType.PRIVATE:
+
+        t = """💌╖اهلا بيك حبيبي آلمـطـور
+
+⚙️╢ تقدر تتحكم باوامر البوت عن طريق
+
+🔍╢ الكيبورد اللي ظهرلك تحت ↘️
+
+🔰╜ للدخول لقناة السورس [دوس هنا](https://t.me/kkk8lI)"""
+
+        keyboard = ReplyKeyboardMarkup(keyboard=[
+
+            [KeyboardButton("⏬ قفل الكيبورد ⏬")],
+
+            [KeyboardButton("تعطيل التواصل 🔰")] +
+
+            [KeyboardButton("تفعيل التواصل ⚡️")],
+
+            [KeyboardButton("تعطيل الاذاعه 🔕")] +
+
+            [KeyboardButton("تفعيل الاذاعه 🔔")],
+
+            [KeyboardButton("تعطيل اليوتيوب 🛠")] +
+
+            [KeyboardButton("تفعيل اليوتيوب ⚙️")],
+
+            [KeyboardButton("المطورين 🔱")],
+
+            [KeyboardButton("اذاعه خاص 🔊")] +
+
+            [KeyboardButton("اذاعه بالمجموعات 📡")],
+
+            [KeyboardButton("اذاعه بالتوجيه خاص 👤")] +
+
+            [KeyboardButton("اذاعه بالتوجيه للمجموعات ⁦♻️⁩")],
+
+            [KeyboardButton("اذاعه موجهه بالتثبيت ⁦♻️⁩")] +
+
+            [KeyboardButton("اذاعه بالتثبيت 📎")],
+
+            [KeyboardButton("الاحصائيات 📊")],
+
+            [KeyboardButton("المشتركين ⁦🗣️⁩")] +
+
+            [KeyboardButton("الجروبات 📢")],
+
+            [KeyboardButton("حذف الاعضاء الفيك ⚡️")] +
+
+            [KeyboardButton("حذف الجروبات الفيك ⚡️")],
+
+            [KeyboardButton("حذف رد عام 🚫")] +
+
+            [KeyboardButton("اضف رد عام 💬")],
+
+            [KeyboardButton("الردود العامه 📝")],
+
+            [KeyboardButton("قائمه الكتم العام 🛑")] +
+
+            [KeyboardButton("قائمه الحظر العام 🚫")],
+
+            [KeyboardButton("ضع اسم للبوت 🤖")],
+
+            [KeyboardButton("معلومات السيرفر ℹ️")] +
+
+            [KeyboardButton("سرعه السيرفر 🚀️")],
+
+            [KeyboardButton("جلب نسخه احتياطيه اساسيه 📬")],
+
+            [KeyboardButton("رفع نسخه احتياطيه ⛓")],
+
+            [KeyboardButton("الاصدار ⁦⚙️⁩")] +
+
+            [KeyboardButton("تحديث السورس 📥")],
+
+            [KeyboardButton("رستر البوت 🕹")],
+
+            [KeyboardButton("الغاء ⁦🛠️⁩")],
+
+        ],
+
+            resize_keyboard=True,
+
+            one_time_keyboard=False
+
         )
-        if await is_on_off(2):
-            return await app.send_message(
-                chat_id=config.LOGGER_ID,
-                text=f"• المستخـدم {message.from_user.mention} قام بالدخـول لـ البـوت.\n\n<b>• ايديـه :</b> <code>{message.from_user.id}</code>\n<b>• يـوزره :</b> @{message.from_user.username}",
-            )
+
+        await m.reply_text(t, reply_markup=keyboard, parse_mode=enums.ParseMode.MARKDOWN)
+
+    else:
+
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton("🤖 ابدأ محادثة", url=f"https://t.me/{get_bot_information()[1]}?start=start")]])
+
+        await m.reply_text("مرحبا! أنا ثيو. لاكتشاف وظائفي ، ابدأ محادثة معي.", reply_markup=keyboard)
 
 
-@app.on_message(filters.command(["start"]) & filters.group & ~BANNED_USERS)
-@LanguageStart
-async def start_gp(client, message: Message, _):
-    out = start_panel(_)
-    uptime = int(time.time() - _boot_)
-    await message.reply_photo(
-        photo=config.START_IMG_URL,
-        caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
-        reply_markup=InlineKeyboardMarkup(out),
-    )
-    return await add_served_chat(message.chat.id)
 
 
-@app.on_message(filters.new_chat_members, group=-1)
-async def welcome(client, message: Message):
-    for member in message.new_chat_members:
-        try:
-            language = await get_lang(message.chat.id)
-            _ = get_string(language)
-            if await is_banned_user(member.id):
-                try:
-                    await message.chat.ban_member(member.id)
-                except:
-                    pass
-            if member.id == app.id:
-                if message.chat.type != ChatType.SUPERGROUP:
-                    await message.reply_text(_["start_4"])
-                    return await app.leave_chat(message.chat.id)
-                if message.chat.id in await blacklisted_chats():
-                    await message.reply_text(
-                        _["start_5"].format(
-                            app.mention,
-                            f"https://t.me/{app.username}?start=sudolist",
-                            config.SUPPORT_CHAT,
-                        ),
-                        disable_web_page_preview=True,
-                    )
-                    return await app.leave_chat(message.chat.id)
 
-                out = start_panel(_)
-                await message.reply_photo(
-                    photo=config.START_IMG_URL,
-                    caption=_["start_3"].format(
-                        message.from_user.first_name,
-                        app.mention,
-                        message.chat.title,
-                    ),
-                    reply_markup=InlineKeyboardMarkup(out),
-                )
-                await add_served_chat(message.chat.id)
-                await message.stop_propagation()
-        except Exception as ex:
-            print(ex)
+@Client.on_message(filters.command("start", prefix) & ~filters.user(developer))
+
+async def start(c: Client, m: Message):
+
+    await confirm_user(c, m)
+
+    if m.chat.type == enums.ChatType.PRIVATE:
+
+        botname = get_db_botname() or "ثيو"
+
+        x = f"""
+
+●━◉⟞⟦𝗦𝗼𝘂𝗿𝗰𝗲 𝗧𝗲𝘁𝗼 ⟧⟝◉━●
+
+
+
+✧ ¦ مـرحـبا بـك انـا بـوت {botname} 😊 
+
+✧ ¦ وظـفـتـي هـيا حـمـايـه الـجـࢪوب ⚙️
+
+✧ ¦ بـشـغـل اغاني و فديوهات في الكول 🎸
+
+✧ ¦ بـنزل اغاني و فيديوهات بردو  يـسـڪࢪ 📥
+
+✧ ¦ ضـفـنـي مـشـࢪف و هـتـفـعـل تـلـقـائـي 
+
+●━◉⟞⟦ 𝗦𝗼𝘂𝗿𝗰𝗲 𝗧𝗲𝘁𝗼 ⟧⟝◉━●
+
+        """
+
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton("الاوامر 📚", callback_data="commandss")] + [InlineKeyboardButton("ℹ️ حول", callback_data="infos")], [InlineKeyboardButton("تغير اللغه 🌐", callback_data="chlang")], [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=dream")]])
+
+        async for photo in c.get_chat_photos(get_bot_information()[1], limit=1):
+
+            await m.reply_photo(photo.file_id, caption=x, reply_markup=keyboard)
+
+    else:
+
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton("🤖 ابدأ محادثة", url=f"https://t.me/{get_bot_information()[1]}?start=start")]])
+
+        await m.reply_text("مرحبا! أنا دريم. لاكتشاف وظائفي ، ابدأ محادثة معي.", reply_markup=keyboard)
+
+
+
+
+
+@app.on_callback_query(filters.regex("^start_back$"))
+
+async def start_back(c: Client, m: CallbackQuery):
+
+    botname = get_db_botname() or "ثيو"
+
+    x = f"""
+
+●━◉⟞⟦𝗦𝗼𝘂𝗿𝗰𝗲 𝗧𝗲𝘁𝗼 ⟧⟝◉━●
+
+
+
+✧ ¦ مـرحـبا بـك انـا بـوت {botname} 😊 
+
+✧ ¦ وظـفـتـي هـيا حـمـايـه الـجـࢪوب ⚙️
+
+✧ ¦ بـشـغـل اغاني و فديوهات في الكول 🎸
+
+✧ ¦ بـنزل اغاني و فيديوهات بردو  يـسـڪࢪ 📥
+
+✧ ¦ ضـفـنـي مـشـࢪف و هـتـفـعـل تـلـقـائـي 
+
+●━◉⟞⟦ 𝗦𝗼𝘂𝗿𝗰𝗲 𝗧𝗲𝘁𝗼 ⟧⟝◉━●
+
+    """
+
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton("الاوامر 📚", callback_data="commandss")] + [InlineKeyboardButton("ℹ️ حول", callback_data="infos")], [InlineKeyboardButton("تغير اللغه 🌐", callback_data="chlang")], [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=dream")]])
+
+    async for photo in c.get_chat_photos(get_bot_information()[1], limit=1):
+
+        await m.message.edit_text(x, reply_markup=keyboard)
+
+
+
+
+
+@app.on_callback_query(filters.regex("^infos$"))
+
+async def infos(c: Client, m: CallbackQuery):
+
+    res = """
+
+╭──── • ◈ • ────╮
+
+么 [𝗦𝗼𝘂𝗿𝗰𝗲 𝗧𝗵𝗲𝗼](t.me/kkk8lI)
+
+么 [𝗦𝗼𝘂𝗿𝗰𝗲 𝗕𝗼𝘁](t.me/R40_bot)
+
+么 [𝗠𝗮𝗿𝗰𝗲𝗹𝗼](t.me/s_e_t)
+
+╰──── • ◈ • ────╯
+
+⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
+
+        """
+
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton("« عوده", callback_data="start_back")]])
+
+    await m.message.edit_text(res, reply_markup=keyboard, disable_web_page_preview=True, parse_mode=enums.ParseMode.MARKDOWN)
+
+
+
+
+
+@app.on_callback_query(filters.regex("^commandss$"))
+
+async def commandsss(c: Client, m: CallbackQuery):
+
+    await command2(c, m)

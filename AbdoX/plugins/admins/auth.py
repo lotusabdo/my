@@ -15,7 +15,7 @@ from AbdoX.utils.inline import close_markup
 from config import BANNED_USERS, adminlist
 
 
-@app.on_message(command("رفع ادمن") & filters.group & ~BANNED_USERS)
+@app.on_message(command("hide") & filters.group & ~BANNED_USERS)
 @AdminActual
 async def auth(client, message: Message, _):
     if not message.reply_to_message:
@@ -44,7 +44,7 @@ async def auth(client, message: Message, _):
         return await message.reply_text(_["auth_3"].format(user.mention))
 
 
-@app.on_message(command("تنزيل ادمن") & filters.group & ~BANNED_USERS)
+@app.on_message(command("troou") & filters.group & ~BANNED_USERS)
 @AdminActual
 async def unauthusers(client, message: Message, _):
     if not message.reply_to_message:
@@ -64,7 +64,7 @@ async def unauthusers(client, message: Message, _):
 
 
 @app.on_message(
-    command(["قائمة الادمن", "الادمنيه"]) & filters.group & ~BANNED_USERS
+    command(["frowdz"]) & filters.group & ~BANNED_USERS
 )
 @language
 async def authusers(client, message: Message, _):

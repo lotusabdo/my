@@ -75,12 +75,12 @@ async def khfzss(client: Client, message: Message):
     user_name = message.from_user.first_name
     buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await app.send_message(OWNER_ID, f"<b>⌯ قام {message.from_user.mention}\n</b>"
-                                     f"<b>⌯ بمناداتك عزيزي المطور\n</b>"
-                                     f"<b>⌯ الأيدي {user_id}\n</b>"
-                                     f"<b>⌯ اليوزر @{user_ab}\n</b>"
-                                     f"<b>⌯ ايدي المجموعة {message.chat.id}\n</b>"
-                                     f"<b>⌯ يوزر المجموعه {chatusername}</b>",
+    await app.send_message(OWNER_ID, f"<b>✯ قام {message.from_user.mention}\n</b>"
+                                     f"<b>✯ بمناداتك عزيزي المطور\n</b>"
+                                     f"<b>✯ الأيدي {user_id}\n</b>"
+                                     f"<b>✯ اليوزر @{user_ab}\n</b>"
+                                     f"<b>✯ ايدي المجموعة {message.chat.id}\n</b>"
+                                     f"<b>✯ يوزر المجموعه {chatusername}</b>",
                                      reply_markup=reply_markup)
 
 @app.on_message(filters.command(["تحويل لصوره"], ""))

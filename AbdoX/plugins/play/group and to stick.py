@@ -20,7 +20,7 @@ async def ginnj(client: Client, message: Message):
     chat_name = message.chat.title
     chat_username = f"@{message.chat.username}"
     photo = await client.download_media(message.chat.photo.big_file_id)
-    await message.reply_photo(photo=photo, caption=f"""⌯ اسم الجروب : {chat_name} 🍀 ⋅\n⌯ ايدي الجروب : {chat_idd} 🍀 ⋅\n⌯ رابط الجروب : {chat_username} 🍀 ⋅""",     
+    await message.reply_photo(photo=photo, caption=f"""⌯ اسم الجروب : {chat_name} ✯ ⋅\n⌯ ايدي الجروب : {chat_idd} ✯ ⋅\n⌯ رابط الجروب : {chat_username} ✯ ⋅""",     
     reply_markup=InlineKeyboardMarkup(
             [
                 [

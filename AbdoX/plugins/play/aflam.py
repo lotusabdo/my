@@ -28,7 +28,7 @@ async def aflamAR(c: Client, m: Message):
         [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{app.username}?startgroup=new")],
         
     ])
-    await m.reply_text("◍ اهلا بيك في قائمة الافلام والمسلسلات العربيه\n√", reply_markup=keyboard)
+    await m.reply_text("✯ اهلا بيك في قائمة الافلام والمسلسلات العربيه\n√", reply_markup=keyboard)
 
 
 # Replay Edit
@@ -48,7 +48,7 @@ async def aflamAR2(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{app.username}?startgroup=new")],
         
     ])
-    await m.message.edit_text("◍ اهلا بيك في قائمة الافلام والمسلسلات العربيه\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في قائمة الافلام والمسلسلات العربيه\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^film (\\d+)$"))
@@ -67,7 +67,7 @@ async def film(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
 
     ])
-    await m.message.edit_text("◍ اهلا بيك في قائمة الافلام العربيه\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في قائمة الافلام العربيه\n√", reply_markup=keyboard)
 
 
 
@@ -80,32 +80,32 @@ async def comedy(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ وقفة رجاله", callback_data="Xco1 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الخطة العايمة", callback_data="Xco2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ بنات ثانوي", callback_data="Xco3 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ عفريت ترانزيت", callback_data="Xco4 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ زكي شان", callback_data="Xco5 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ سمير وشهير وبهير", callback_data="Xco6 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ تصبح علي خير", callback_data="Xco7 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ بابا", callback_data="Xco8 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ جدو نحنوح", callback_data="Xco9 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ سمير ابو النيل", callback_data="Xco10 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ كلبي دليلي", callback_data="Xco11 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ بنات العم", callback_data="Xco12 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ علي بابا", callback_data="Xco13 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ فول الصين العظيم", callback_data="Xco14 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ حسن وبقلظ", callback_data="Xco15 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الكويسين", callback_data="Xco16 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ يوم مالوش لازمه", callback_data="Xco17 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ غبي منه فيه", callback_data="Xco18 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ خير وبركه", callback_data="Xco19 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ البدله", callback_data="Xco20 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ وقفة رجاله", callback_data="Xco1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الخطة العايمة", callback_data="Xco2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ بنات ثانوي", callback_data="Xco3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ عفريت ترانزيت", callback_data="Xco4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ زكي شان", callback_data="Xco5 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ سمير وشهير وبهير", callback_data="Xco6 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ تصبح علي خير", callback_data="Xco7 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ بابا", callback_data="Xco8 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جدو نحنوح", callback_data="Xco9 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ سمير ابو النيل", callback_data="Xco10 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ كلبي دليلي", callback_data="Xco11 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ بنات العم", callback_data="Xco12 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ علي بابا", callback_data="Xco13 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ فول الصين العظيم", callback_data="Xco14 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ حسن وبقلظ", callback_data="Xco15 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الكويسين", callback_data="Xco16 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ يوم مالوش لازمه", callback_data="Xco17 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ غبي منه فيه", callback_data="Xco18 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ خير وبركه", callback_data="Xco19 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ البدله", callback_data="Xco20 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع🔙", callback_data="film " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
 
     ])
-    await m.message.edit_text("◍ اهلا بك في قائمة الافلام الكوميدي العربيه\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بك في قائمة الافلام الكوميدي العربيه\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^Xco1 (\\d+)$"))
@@ -115,8 +115,8 @@ async def Xco1(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco1 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco2 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : وقفة رجالة
@@ -135,8 +135,8 @@ async def Xco2(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco3 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco4 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : الخطة العايمة
@@ -155,8 +155,8 @@ async def Xco3(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco5 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco6 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco5 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco6 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : بنات ثانوي
@@ -175,8 +175,8 @@ async def Xco4(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco7 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco8 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco7 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco8 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : عفريت ترانزيت
@@ -195,8 +195,8 @@ async def Xco5(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco9 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco10 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco9 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco10 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : زكي شان
@@ -215,8 +215,8 @@ async def Xco6(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco11 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco12 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco11 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco12 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : سمير وشهير وبهير
@@ -235,8 +235,8 @@ async def Xco7(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco13 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco14 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco13 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco14 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : تصبح علي خير
@@ -255,8 +255,8 @@ async def Xco8(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco15 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco16 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco15 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco16 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : بابا
@@ -275,8 +275,8 @@ async def Xco9(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco17 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco18 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco17 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco18 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : جدو نحنوح
@@ -295,8 +295,8 @@ async def Xco10(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco19 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco20 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco19 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco20 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : سمير ابو النيل
@@ -315,8 +315,8 @@ async def Xco11(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco21 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco22 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco21 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco22 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : كلبي دليلي
@@ -335,8 +335,8 @@ async def Xco12(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco23 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco24 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco23 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco24 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : بنات العم
@@ -355,8 +355,8 @@ async def Xco13(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco25 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco26 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco25 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco26 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : علي بابا
@@ -375,8 +375,8 @@ async def Xco14(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco27 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco28 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco27 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco28 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : فول الصين العظيم
@@ -395,8 +395,8 @@ async def Xco15(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco29 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco30 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco29 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco30 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : حسن وبقلظ
@@ -415,8 +415,8 @@ async def Xco16(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco31 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco32 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco31 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco32 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : الكويسين
@@ -435,8 +435,8 @@ async def Xco17(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco33 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco34 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco33 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco34 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : يوم مالوش لازمة
@@ -455,8 +455,8 @@ async def Xco18(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco35 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco36 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco35 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco36 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : غبي منه فيه
@@ -475,8 +475,8 @@ async def Xco19(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco37 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco38 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco37 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco38 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : خير وبركة
@@ -496,8 +496,8 @@ async def Xco20(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco39 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco40 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXco39 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXco40 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : البدلة
@@ -951,8 +951,8 @@ async def Xact1(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact1 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXact1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXact2 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : حملة فرعون
@@ -971,8 +971,8 @@ async def Xact2(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact3 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXact3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXact4 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : بني ادم
@@ -991,8 +991,8 @@ async def Xact3(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact5 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact6 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXact5 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXact6 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""فيلم #الخلية | دراما , اكشن | 2017
@@ -1007,8 +1007,8 @@ async def Xact4(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact7 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact8 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXact7 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXact8 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : حرب كرموز
@@ -1027,8 +1027,8 @@ async def Xact5(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact9 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact10 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXact9 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXact10 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : من ضهر راجل
@@ -1047,8 +1047,8 @@ async def Xact6(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact11 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact12 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXact11 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXact12 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : زنزانة سبعة
@@ -1067,8 +1067,8 @@ async def Xact7(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact13 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact14 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXact13 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXact14 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : خارج عن القانون
@@ -1087,8 +1087,8 @@ async def Xact8(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact15 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact16 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXact15 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXact16 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : ولاد العم
@@ -1107,8 +1107,8 @@ async def Xact9(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact17 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact18 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXact17 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXact18 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : وش سجون
@@ -1317,11 +1317,11 @@ async def drama(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ هذه ليلتي", callback_data="Xdra1 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ ورقة جمعية", callback_data="Xdra2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ حظر تجوال", callback_data="Xdra3 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ القط", callback_data="Xdra4 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ خان تيولا", callback_data="Xdra5 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ هذه ليلتي", callback_data="Xdra1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ ورقة جمعية", callback_data="Xdra2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ حظر تجوال", callback_data="Xdra3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ القط", callback_data="Xdra4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ خان تيولا", callback_data="Xdra5 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع", callback_data="aflamAR2 " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
@@ -1337,8 +1337,8 @@ async def Xdra1(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra1 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXdra1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXdra2 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="drama " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : هذه ليلتي
@@ -1357,8 +1357,8 @@ async def Xdra2(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra3 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXdra3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXdra4 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="drama " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : ورقة جمعية
@@ -1377,8 +1377,8 @@ async def Xdra3(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra5 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra6 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXdra5 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXdra6 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="drama " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : حظر تجول
@@ -1397,8 +1397,8 @@ async def Xdra4(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra7 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra8 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXdra7 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXdra8 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="drama " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : القط
@@ -1417,8 +1417,8 @@ async def Xdra5(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra9 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra10 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ جوده متوسطه", callback_data="XXdra9 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ جوده عاليه", callback_data="XXdra10 " + str(m.from_user.id))],
         [InlineKeyboardButton("Ⴆᥲ️ᥴk", callback_data="drama " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : خان تيولا
@@ -1566,7 +1566,7 @@ async def moslsl(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
 
     ])
-    await m.message.edit_text("◍ اهلا بيك في قائمة المسلسلات العربيه\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في قائمة المسلسلات العربيه\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^Xmos1 (\\d+)$"))
@@ -1577,25 +1577,25 @@ async def Xmos1(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos214 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos215 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos216 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos217 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos218 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos219 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos220 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos221 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos222 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos223 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos224 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos225 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos226 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 1", callback_data="Zmos214 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 2", callback_data="Zmos215 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 3", callback_data="Zmos216 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 4", callback_data="Zmos217 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 5", callback_data="Zmos218 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 6", callback_data="Zmos219 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 7", callback_data="Zmos220 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 8", callback_data="Zmos221 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 9", callback_data="Zmos222 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 10", callback_data="Zmos223 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 11", callback_data="Zmos224 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 12", callback_data="Zmos225 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 13", callback_data="Zmos226 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع", callback_data="moslsl " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
 
     ])
-    await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 حشمت في البيت الأبيض\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في مسلسل 📼 حشمت في البيت الأبيض\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^Xmos2 (\\d+)$"))
@@ -1606,42 +1606,42 @@ async def Xmos2(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos229 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos230 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos231 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos232 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos233 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos234 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos235 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos236 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos237 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos238 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos239 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos240 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos241 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos242 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos243 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos244 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos245 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos246 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos247 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos248 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos249 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos250 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos251 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos252 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos253 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos254 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos255 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos256 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos257 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos258 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 1", callback_data="Zmos229 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 2", callback_data="Zmos230 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 3", callback_data="Zmos231 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 4", callback_data="Zmos232 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 5", callback_data="Zmos233 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 6", callback_data="Zmos234 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 7", callback_data="Zmos235 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 8", callback_data="Zmos236 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 9", callback_data="Zmos237 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 10", callback_data="Zmos238 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 11", callback_data="Zmos239 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 12", callback_data="Zmos240 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 13", callback_data="Zmos241 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 14", callback_data="Zmos242 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 15", callback_data="Zmos243 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 16", callback_data="Zmos244 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 17", callback_data="Zmos245 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 18", callback_data="Zmos246 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 19", callback_data="Zmos247 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 20", callback_data="Zmos248 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 21", callback_data="Zmos249 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 22", callback_data="Zmos250 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 23", callback_data="Zmos251 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 24", callback_data="Zmos252 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 25", callback_data="Zmos253 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 26", callback_data="Zmos254 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 27", callback_data="Zmos255 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 28", callback_data="Zmos256 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 29", callback_data="Zmos257 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 30", callback_data="Zmos258 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع", callback_data="moslsl " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
 
     ])
-    await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 2- لعبة النسيان\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في مسلسل 📼 2- لعبة النسيان\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^Xmos3 (\\d+)$"))
@@ -1652,42 +1652,42 @@ async def Xmos3(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos261 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos262 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos263 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos264 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos265 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos266 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos267 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos268 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos269 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos270 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos271 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos272 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos273 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos274 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos275 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos276 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos277 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos278 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos279 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos280 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos281 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos282 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos283 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos284 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos285 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos286 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos287 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos288 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos289 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos290 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 1", callback_data="Zmos261 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 2", callback_data="Zmos262 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 3", callback_data="Zmos263 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 4", callback_data="Zmos264 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 5", callback_data="Zmos265 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 6", callback_data="Zmos266 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 7", callback_data="Zmos267 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 8", callback_data="Zmos268 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 9", callback_data="Zmos269 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 10", callback_data="Zmos270 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 11", callback_data="Zmos271 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 12", callback_data="Zmos272 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 13", callback_data="Zmos273 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 14", callback_data="Zmos274 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 15", callback_data="Zmos275 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 16", callback_data="Zmos276 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 17", callback_data="Zmos277 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 18", callback_data="Zmos278 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 19", callback_data="Zmos279 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 20", callback_data="Zmos280 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 21", callback_data="Zmos281 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 22", callback_data="Zmos282 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 23", callback_data="Zmos283 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 24", callback_data="Zmos284 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 25", callback_data="Zmos285 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 26", callback_data="Zmos286 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 27", callback_data="Zmos287 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 28", callback_data="Zmos288 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 29", callback_data="Zmos289 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 30", callback_data="Zmos290 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع", callback_data="moslsl " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
 
     ])
-    await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 3- ب 100 وش\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في مسلسل 📼 3- ب 100 وش\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^Xmos4 (\\d+)$"))
@@ -1698,42 +1698,42 @@ async def Xmos4(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos293 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos294 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos295 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos296 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos297 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos298 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos299 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos300 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos301 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos302 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos303 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos304 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos305 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos306 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos307 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos308 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos309 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos310 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos311 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos312 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos313 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos314 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos315 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos316 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos317 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos318 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos319 " + str(m.from_user.id))], 
-        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos320 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos321 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos322 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 1", callback_data="Zmos293 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 2", callback_data="Zmos294 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 3", callback_data="Zmos295 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 4", callback_data="Zmos296 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 5", callback_data="Zmos297 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 6", callback_data="Zmos298 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 7", callback_data="Zmos299 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 8", callback_data="Zmos300 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 9", callback_data="Zmos301 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 10", callback_data="Zmos302 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 11", callback_data="Zmos303 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 12", callback_data="Zmos304 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 13", callback_data="Zmos305 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 14", callback_data="Zmos306 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 15", callback_data="Zmos307 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 16", callback_data="Zmos308 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 17", callback_data="Zmos309 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 18", callback_data="Zmos310 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 19", callback_data="Zmos311 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 20", callback_data="Zmos312 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 21", callback_data="Zmos313 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 22", callback_data="Zmos314 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 23", callback_data="Zmos315 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 24", callback_data="Zmos316 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 25", callback_data="Zmos317 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 26", callback_data="Zmos318 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 27", callback_data="Zmos319 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("✯ الحلقة 28", callback_data="Zmos320 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 29", callback_data="Zmos321 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 30", callback_data="Zmos322 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع", callback_data="moslsl " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
 
     ])
-    await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 4- آدم\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في مسلسل 📼 4- آدم\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^Xmos5 (\\d+)$"))
@@ -1744,72 +1744,72 @@ async def Xmos5(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos325 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos326 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos327 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos328 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos329 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos330 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos331 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos332 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos333 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos334 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos335 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos336 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos337 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos338 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos339 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos340 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos341 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos342 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos343 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos344 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos345 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos346 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos347 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos348 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos349 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos350 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos351 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos352 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos353 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos354 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 31", callback_data="Zmos355 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 32", callback_data="Zmos356 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 33", callback_data="Zmos357 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 34", callback_data="Zmos358 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 35", callback_data="Zmos359 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 36", callback_data="Zmos360 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 37", callback_data="Zmos361 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 38", callback_data="Zmos362 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 39", callback_data="Zmos363 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 40", callback_data="Zmos364 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 41", callback_data="Zmos365 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 42", callback_data="Zmos366 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 43", callback_data="Zmos367 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 44", callback_data="Zmos368 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 45", callback_data="Zmos369 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 46", callback_data="Zmos370 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 47", callback_data="Zmos371 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 48", callback_data="Zmos372 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 49", callback_data="Zmos373 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 50", callback_data="Zmos374 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 51", callback_data="Zmos375 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 52", callback_data="Zmos376 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 53", callback_data="Zmos377 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 54", callback_data="Zmos378 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 55", callback_data="Zmos379 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 56", callback_data="Zmos380 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 57", callback_data="Zmos381 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 58", callback_data="Zmos382 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 59", callback_data="Zmos383 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 60", callback_data="Zmos384 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 1", callback_data="Zmos325 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 2", callback_data="Zmos326 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 3", callback_data="Zmos327 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 4", callback_data="Zmos328 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 5", callback_data="Zmos329 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 6", callback_data="Zmos330 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 7", callback_data="Zmos331 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 8", callback_data="Zmos332 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 9", callback_data="Zmos333 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 10", callback_data="Zmos334 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 11", callback_data="Zmos335 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 12", callback_data="Zmos336 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 13", callback_data="Zmos337 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 14", callback_data="Zmos338 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 15", callback_data="Zmos339 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 16", callback_data="Zmos340 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 17", callback_data="Zmos341 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 18", callback_data="Zmos342 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 19", callback_data="Zmos343 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 20", callback_data="Zmos344 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 21", callback_data="Zmos345 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 22", callback_data="Zmos346 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 23", callback_data="Zmos347 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 24", callback_data="Zmos348 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 25", callback_data="Zmos349 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 26", callback_data="Zmos350 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 27", callback_data="Zmos351 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 28", callback_data="Zmos352 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 29", callback_data="Zmos353 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 30", callback_data="Zmos354 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 31", callback_data="Zmos355 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 32", callback_data="Zmos356 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 33", callback_data="Zmos357 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 34", callback_data="Zmos358 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 35", callback_data="Zmos359 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 36", callback_data="Zmos360 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 37", callback_data="Zmos361 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 38", callback_data="Zmos362 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 39", callback_data="Zmos363 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 40", callback_data="Zmos364 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 41", callback_data="Zmos365 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 42", callback_data="Zmos366 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 43", callback_data="Zmos367 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 44", callback_data="Zmos368 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 45", callback_data="Zmos369 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 46", callback_data="Zmos370 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 47", callback_data="Zmos371 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 48", callback_data="Zmos372 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 49", callback_data="Zmos373 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 50", callback_data="Zmos374 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 51", callback_data="Zmos375 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 52", callback_data="Zmos376 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 53", callback_data="Zmos377 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 54", callback_data="Zmos378 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 55", callback_data="Zmos379 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 56", callback_data="Zmos380 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 57", callback_data="Zmos381 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 58", callback_data="Zmos382 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 59", callback_data="Zmos383 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 60", callback_data="Zmos384 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع", callback_data="moslsl " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
 
     ])
-    await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 6-ابو العروسة\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في مسلسل 📼 6-ابو العروسة\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^toba (\\d+)$"))
@@ -1820,42 +1820,42 @@ async def toba(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="toba1 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="toba2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="toba3 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="toba4 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="toba5 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="toba6 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="toba7" + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="toba8 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="toba9 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="toba10 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="toba11 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="toba12 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="toba13 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="toba14 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="toba15 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="toba16 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="toba17 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="toba18 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="toba19 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="toba20 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="toba21 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="toba22 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="toba23 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="toba24 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="toba25 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="toba26 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="toba27 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="toba28 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="toba29 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="toba30 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 1", callback_data="toba1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 2", callback_data="toba2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 3", callback_data="toba3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 4", callback_data="toba4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 5", callback_data="toba5 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 6", callback_data="toba6 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 7", callback_data="toba7" + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 8", callback_data="toba8 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 9", callback_data="toba9 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 10", callback_data="toba10 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 11", callback_data="toba11 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 12", callback_data="toba12 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 13", callback_data="toba13 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 14", callback_data="toba14 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 15", callback_data="toba15 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 16", callback_data="toba16 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 17", callback_data="toba17 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 18", callback_data="toba18 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 19", callback_data="toba19 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 20", callback_data="toba20 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 21", callback_data="toba21 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 22", callback_data="toba22 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 23", callback_data="toba23 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 24", callback_data="toba24 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 25", callback_data="toba25 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 26", callback_data="toba26 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 27", callback_data="toba27 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 28", callback_data="toba28 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 29", callback_data="toba29 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 30", callback_data="toba30 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع", callback_data="moslsl " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
 
     ])
-    await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 5-توبه\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في مسلسل 📼 5-توبه\n√", reply_markup=keyboard)
     
 
 ## link moslsl
@@ -3798,7 +3798,7 @@ async def msrahia(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
 
     ])
-    await m.message.edit_text("◍ اهلا بيك في قائمة الكارتون للاطفال العربيه\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في قائمة الكارتون للاطفال العربيه\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^Xms1 (\\d+)$"))
@@ -3820,7 +3820,7 @@ async def Xms1(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{app.username}?startgroup=new")],
         
     ])
-    await m.message.edit_text("◍ اهلا بيك في قائمة اجزاء افلام كرتون\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في قائمة اجزاء افلام كرتون\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^Xmsrh1 (\\d+)$"))
@@ -3831,30 +3831,30 @@ async def Xmsrh1(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh388 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh389 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh390 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh391 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh392 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh393 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh394 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh395 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh396 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh397 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh398 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh399 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh400 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh401 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmsrh402 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmsrh403 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmsrh404 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 1", callback_data="Zmsrh388 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 2", callback_data="Zmsrh389 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 3", callback_data="Zmsrh390 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 4", callback_data="Zmsrh391 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 5", callback_data="Zmsrh392 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 6", callback_data="Zmsrh393 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 7", callback_data="Zmsrh394 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 8", callback_data="Zmsrh395 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 9", callback_data="Zmsrh396 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 10", callback_data="Zmsrh397 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 11", callback_data="Zmsrh398 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 12", callback_data="Zmsrh399 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 13", callback_data="Zmsrh400 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 14", callback_data="Zmsrh401 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 15", callback_data="Zmsrh402 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 16", callback_data="Zmsrh403 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 17", callback_data="Zmsrh404 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع", callback_data="Xms1 " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
         [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{app.username}?startgroup=new")],
         
     ])
-    await m.message.edit_text("◍ اهلا بيك في قائمه 🔘 | كرتون توم وجيري |\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في قائمه 🔘 | كرتون توم وجيري |\n√", reply_markup=keyboard)
     return
 
 
@@ -3866,26 +3866,26 @@ async def Xmsrh2(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh406 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh407 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh408 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh409 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh410 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh411 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh412 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh413 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh414 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh415 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh416 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh417 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh418 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh419 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 1", callback_data="Zmsrh406 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 2", callback_data="Zmsrh407 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 3", callback_data="Zmsrh408 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 4", callback_data="Zmsrh409 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 5", callback_data="Zmsrh410 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 6", callback_data="Zmsrh411 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 7", callback_data="Zmsrh412 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 8", callback_data="Zmsrh413 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 9", callback_data="Zmsrh414 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 10", callback_data="Zmsrh415 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 11", callback_data="Zmsrh416 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 12", callback_data="Zmsrh417 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 13", callback_data="Zmsrh418 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 14", callback_data="Zmsrh419 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع", callback_data="Xms1 " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
 
     ])
-    await m.message.edit_text("◍ اهلا بيك في قائمه 🔘 | كرتون اسبونج بوب |\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في قائمه 🔘 | كرتون اسبونج بوب |\n√", reply_markup=keyboard)
     return
 
 
@@ -3897,35 +3897,35 @@ async def Xmsrh3(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh421 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh422 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh423 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh424 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh425 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh426 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh427 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh428 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh429 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh430 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh431 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh432 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh433 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh434 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmsrh435 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmsrh436 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmsrh437 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmsrh438 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmsrh439 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmsrh440 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmsrh441 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmsrh442 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 1", callback_data="Zmsrh421 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 2", callback_data="Zmsrh422 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 3", callback_data="Zmsrh423 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 4", callback_data="Zmsrh424 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 5", callback_data="Zmsrh425 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 6", callback_data="Zmsrh426 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 7", callback_data="Zmsrh427 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 8", callback_data="Zmsrh428 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 9", callback_data="Zmsrh429 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 10", callback_data="Zmsrh430 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 11", callback_data="Zmsrh431 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 12", callback_data="Zmsrh432 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 13", callback_data="Zmsrh433 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 14", callback_data="Zmsrh434 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 15", callback_data="Zmsrh435 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 16", callback_data="Zmsrh436 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 17", callback_data="Zmsrh437 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 18", callback_data="Zmsrh438 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 19", callback_data="Zmsrh439 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 20", callback_data="Zmsrh440 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 21", callback_data="Zmsrh441 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 22", callback_data="Zmsrh442 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع", callback_data="Xms1 " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
         [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{app.username}?startgroup=new")],
         
     ])
-    await m.message.edit_text("◍ اهلا بيك في قائمه 🔘 | اغاني طيور الجنه 😍 |\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في قائمه 🔘 | اغاني طيور الجنه 😍 |\n√", reply_markup=keyboard)
     return
 
 
@@ -3956,7 +3956,7 @@ async def Xmsrh4(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{app.username}?startgroup=new")],
         
     ])
-    await m.message.edit_text("◍ اهلا بيك في قائمه 🔘 | افلام كرتون |\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في قائمه 🔘 | افلام كرتون |\n√", reply_markup=keyboard)
     return
 
 
@@ -3973,30 +3973,30 @@ async def Xmsrh5(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("السنافر 3", callback_data="Zmsrh469 " + str(m.from_user.id))] +
         [InlineKeyboardButton("السنافر 4", callback_data="Zmsrh470 " + str(m.from_user.id))],
         [InlineKeyboardButton("السنافر 5", callback_data="Zmsrh471 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ السنافر 6", callback_data="Zmsrh472 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ السنافر 7", callback_data="Zmsrh473 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh474 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh475 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh476 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh477 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh478 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh479 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh480 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmsrh481 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmsrh482 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmsrh483 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmsrh484 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmsrh485 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmsrh486 " + str(m.from_user.id))],
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmsrh487 " + str(m.from_user.id))] +
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmsrh488 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ السنافر 6", callback_data="Zmsrh472 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ السنافر 7", callback_data="Zmsrh473 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 8", callback_data="Zmsrh474 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 9", callback_data="Zmsrh475 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 10", callback_data="Zmsrh476 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 11", callback_data="Zmsrh477 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 12", callback_data="Zmsrh478 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 13", callback_data="Zmsrh479 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 14", callback_data="Zmsrh480 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 15", callback_data="Zmsrh481 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 16", callback_data="Zmsrh482 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 17", callback_data="Zmsrh483 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 18", callback_data="Zmsrh484 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 19", callback_data="Zmsrh485 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 20", callback_data="Zmsrh486 " + str(m.from_user.id))],
+        [InlineKeyboardButton("✯ الحلقة 21", callback_data="Zmsrh487 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("✯ الحلقة 22", callback_data="Zmsrh488 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع", callback_data="Xms1 " + str(m.from_user.id))],
         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐑 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y")],
         [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{app.username}?startgroup=new")],
         
     ])
-    await m.message.edit_text("◍ اهلا بيك في قائمه 🔘 | حلقات متنوعه من كارتوننيتو |\n√", reply_markup=keyboard)
+    await m.message.edit_text("✯ اهلا بيك في قائمه 🔘 | حلقات متنوعه من كارتوننيتو |\n√", reply_markup=keyboard)
     return
 
 

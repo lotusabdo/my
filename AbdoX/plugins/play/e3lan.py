@@ -6,7 +6,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-START_IMG_URL = "https://te.legra.ph/file/bd4fbd9dff52615ed1416.jpg"
+START_IMG_URL = "https://telegra.ph/file/73299cc44862f1ec277dd.jpg"
 
 
 MESSAGE = f"""- بوت تشغيل القران  الكريم  بالقنوات والجروبات 

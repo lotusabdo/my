@@ -244,6 +244,7 @@ class YouTubeAPI:
         def audio_dl():
             ydl_optssx = {
                 "format": "bestaudio/best",
+                "username" : "oauth2", "password": "",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
                 "nocheckcertificate": True,
@@ -261,6 +262,7 @@ class YouTubeAPI:
         def video_dl():
             ydl_optssx = {
                 "format": "(bestvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio[ext=m4a])",
+                "username" : "oauth2", "password": "",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
                 "nocheckcertificate": True,
@@ -280,6 +282,7 @@ class YouTubeAPI:
             fpath = f"downloads/{title}"
             ydl_optssx = {
                 "format": formats,
+                "username" : "oauth2", "password": "",
                 "outtmpl": fpath,
                 "geo_bypass": True,
                 "nocheckcertificate": True,
@@ -295,6 +298,7 @@ class YouTubeAPI:
             fpath = f"downloads/{title}.%(ext)s"
             ydl_optssx = {
                 "format": format_id,
+                "username" : "oauth2", "password": "",
                 "outtmpl": fpath,
                 "geo_bypass": True,
                 "nocheckcertificate": True,

@@ -1,119 +1,153 @@
+#
+# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
+#
+# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
+#
+# All rights reserved.
+
 import os
 import re
 import textwrap
+
 import aiofiles
 import aiohttp
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
+from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
+                 ImageFont, ImageOps)
 from youtubesearchpython.__future__ import VideosSearch
+
+from config import YOUTUBE_IMG_URL, OWNER_ID
 from AbdoX import app
-from config import YOUTUBE_IMG_URL
-import logging
 
-# إعداد تسجيل الدخول
-logging.basicConfig(level=logging.INFO)
+def changeImageSize(maxWidth, maxHeight, image):
+    widthRatio = maxWidth / image.size[0]
+    heightRatio = maxHeight / image.size[1]
+    newWidth = int(widthRatio * image.size[0])
+    newHeight = int(heightRatio * image.size[1])
+    newImage = image.resize((newWidth, newHeight))
+    return newImage
 
-def change_image_size_fill(max_width, max_height, image):
-    return ImageOps.fit(image, (max_width, max_height), Image.LANCZOS)
 
-def enhance_image(image):
-    enhancer = ImageEnhance.Contrast(image)
-    image = enhancer.enhance(0.5)  # زيادة التباين قليلاً
-    enhancer = ImageEnhance.Sharpness(image)
-    image = enhancer.enhance(2)  # زيادة الحدة
-    return image
+async def get_thumb(videoid):
+    if os.path.isfile(f"cache/{videoid}.png"):
+        return f"cache/{videoid}.png"
 
-async def fetch_video_data(video_id):
-    url = f"https://www.youtube.com/watch?v={video_id}"
-    results = VideosSearch(url, limit=1)
-    result = (await results.next())["result"][0]
-    video_data = {
-        "title": re.sub(r"\W+", " ", result.get("title", "Unsupported Title")).title(),
-        "duration": result.get("duration", "Unknown Mins"),
-        "thumbnail": result["thumbnails"][0]["url"].split("?")[0],
-        "views": result["viewCount"].get("short", "Unknown Views"),
-        "channel": result["channel"].get("name", "Unknown Channel")
-    }
-    return video_data
-
-async def download_image(url, file_path):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as resp:
-            if resp.status == 200:
-                async with aiofiles.open(file_path, mode="wb") as f:
-                    await f.write(await resp.read())
-
-def overlay_text(draw, text, position, font, fill="white"):
-    draw.text(
-        position,
-        text,
-        fill=fill,
-        font=font,
-    )
-
-async def get_owner_image():
-    return "AbdoX/assets/abdo.png"
-
-async def get_thumb(video_id):
-    cache_path = f"cache/{video_id}.png"
-    if os.path.isfile(cache_path):
-        return cache_path
-
+    url = f"https://www.youtube.com/watch?v={videoid}"
     try:
-        video_data = await fetch_video_data(video_id)
-        thumbnail_url = video_data["thumbnail"]
-        temp_thumb_path = f"cache/thumb_{video_id}.png"
-        
-        await download_image(thumbnail_url, temp_thumb_path)
-        owner_image_path = await get_owner_image()
-        
-        youtube_image = Image.open(temp_thumb_path)
-        resized_image = change_image_size_fill(1280, 720, youtube_image).convert("RGBA")
-        enhanced_image = enhance_image(resized_image)
-        background = enhanced_image.filter(ImageFilter.BoxBlur(15))
-        background = ImageEnhance.Brightness(background).enhance(0.6)
-        
-        owner_image = Image.open(owner_image_path)
-        owner_image.thumbnail((500, 500), Image.LANCZOS)
-        owner_image_with_border = ImageOps.expand(owner_image, border=15, fill="white")
-        
-        background.paste(owner_image_with_border, (50, 100), owner_image_with_border)  # لصق صورة المالك في المكان المرغوب مع قناة ألفا
-        
-        draw = ImageDraw.Draw(background)
-        
-        # تحميل الخط لكل النصوص
-        font_path = "AbdoX/assets/font2.ttf"  # المسار للخط
-        font2_size = 30  # حجم الخط الجديد
-        font2 = ImageFont.truetype(font_path, font2_size)  # خط جديد
-        
-        # وضع النص "MaZen PlAYiNg" بخط أكبر وحواف بيضاء
-        text = "LOTUS PlAYiNg"
-        position = (600, 150)
-        text_color = "white"
-        outline_color = "white"
-        outline_width = 1
-        font_large = ImageFont.truetype(font_path, 70)  # حجم الخط الكبير
-        draw.text(position, text, font=font_large, fill=text_color)
-        draw.text((position[0] - outline_width, position[1]), text, font=font_large, fill=outline_color)
-        draw.text((position[0] + outline_width, position[1]), text, font=font_large, fill=outline_color)
-        draw.text((position[0], position[1] - outline_width), text, font=font_large, fill=outline_color)
-        draw.text((position[0], position[1] + outline_width), text, font=font_large, fill=outline_color)
-        
-        # حساب العرض الأقصى للعنوان ليتناسب مع الصورة
-        max_width_title = 550
+        results = VideosSearch(url, limit=1)
+        for result in (await results.next())["result"]:
+            try:
+                title = result["title"]
+                title = re.sub("\W+", " ", title)
+                title = title.title()
+            except:
+                title = "Unsupported Title"
+            try:
+                duration = result["duration"]
+            except:
+                duration = "Unknown Mins"
+            thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+            try:
+                views = result["viewCount"]["short"]
+            except:
+                views = "Unknown Views"
+            try:
+                channel = result["channel"]["name"]
+            except:
+                channel = "Unknown Channel"
 
-        # وضع عنوان الفيديو بالخط الشائع
-        title_lines = textwrap.wrap(video_data["title"], width=40)
-        for i, line in enumerate(title_lines):
-            overlay_text(draw, line, (600, 280 + 40 * i), font2)  # استخدام الخط الجديد
-        
-        # وضع المعلومات الإضافية (المشاهدات، المدة، القناة) بخط font2
-        overlay_text(draw, f"Views : {video_data['views'][:23]}", (600, 450), font2)
-        overlay_text(draw, f"Duration : {video_data['duration'][:23]} Mins", (600, 490), font2)
-        overlay_text(draw, f"Channel : {video_data['channel']}", (600, 530), font2)
-        
-        os.remove(temp_thumb_path)
-        background.save(cache_path)
-        return cache_path
-    except Exception as e:
-        logging.error(f"Error in get_thumb: {e}")
+        async with aiohttp.ClientSession() as session:
+            async with session.get(thumbnail) as resp:
+                if resp.status == 200:
+                    f = await aiofiles.open(
+                        f"cache/thumb{videoid}.png", mode="wb"
+                    )
+                    await f.write(await resp.read())
+                    await f.close()
+        owner = int(OWNER_ID)
+        wxyz = await app.download_media(
+              (await app.get_users(owner)).photo.big_file_id,
+              file_name=f"{owner}.jpg",
+        )
+        wxy = Image.open(wxyz)
+        youtube = Image.open(f"cache/thumb{videoid}.png")
+        image1 = changeImageSize(1280, 720, youtube)
+        image2 = image1.convert("RGBA")
+        background = image2.filter(filter=ImageFilter.BoxBlur(20))
+        enhancer = ImageEnhance.Brightness(background)
+        background = enhancer.enhance(0.6)
+        Xcenter = wxy.width / 2
+        Ycenter = wxy.height / 2
+        x1 = Xcenter - 250
+        y1 = Ycenter - 250
+        x2 = Xcenter + 250
+        y2 = Ycenter + 250
+        logo = wxy.crop((x1, y1, x2, y2))
+        logo.thumbnail((520, 520), Image.ANTIALIAS)
+        logo = ImageOps.expand(logo, border=15, fill="white")
+        background.paste(logo, (50, 100))
+        draw = ImageDraw.Draw(background)
+        font = ImageFont.truetype("AbdoX/assets/font2.ttf", 40)
+        font2 = ImageFont.truetype("AbdoX/assets/font2.ttf", 70)
+        arial = ImageFont.truetype("AbdoX/assets/font2.ttf", 30)
+        name_font = ImageFont.truetype("AbdoX/assets/font2.ttf", 30)
+        para = textwrap.wrap(title, width=32)
+        j = 0
+        draw.text(
+            (600, 150),
+            "JACK PLAYING",
+            fill="white",
+            stroke_width=2,
+            stroke_fill="white",
+            font=font2,
+        )
+        for line in para:
+            if j == 1:
+                j += 1
+                draw.text(
+                    (600, 340),
+                    f"{line}",
+                    fill="white",
+                    stroke_width=1,
+                    stroke_fill="white",
+                    font=font,
+                )
+            if j == 0:
+                j += 1
+                draw.text(
+                    (600, 280),
+                    f"{line}",
+                    fill="white",
+                    stroke_width=1,
+                    stroke_fill="white",
+                    font=font,
+                )
+
+        draw.text(
+            (600, 450),
+            f"Views : {views[:23]}",
+            (255, 255, 255),
+            font=arial,
+        )
+        draw.text(
+            (600, 500),
+            f"Duration : {duration[:23]} Mins",
+            (255, 255, 255),
+            font=arial,
+        )
+        draw.text(
+            (600, 550),
+            f"Channel : {channel}",
+            (255, 255, 255),
+            font=arial,
+        )
+        try:
+            os.remove(f"cache/thumb{videoid}.png")
+        except:
+            pass
+        background.save(f"cache/{videoid}.png")
+        return f"cache/{videoid}.png"
+    except Exception:
+        await app.send_message("z0hary", Exception)
         return YOUTUBE_IMG_URL

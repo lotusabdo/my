@@ -9,7 +9,7 @@ from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, Message, ChatJoinRequest
 
 
-@app.on_message(filters.regex("^/Lotus"), group=39)
+@app.on_message(filters.regex("^/Jack"), group=39)
 async def cpanel(_, message: Message):             
         text = "اهلا بك بك عزيزي العضو اليك كيب الاعضاء⚡"
         kep = ReplyKeyboardMarkup([
@@ -50,7 +50,7 @@ def reply_to_HEY(Client, message):
         reply_markup=InlineKeyboardMarkup(
             [
             [
-                InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐄 𝐋𝐎𝐓𝐔𝐒", url=f"https://t.me/l2_2Y"),
+                InlineKeyboardButton("𝗧𝗲𝗠 𝗝𝗮𝗖𝗞", url=f"https://t.me/SORCE_JACK"),
             ]
          ]
      )

@@ -20,7 +20,7 @@ from AbdoX import (Apple, Resso, Spotify, Telegram, YouTube, app)
 
 
 
-@app.on_message(filters.command(["ابراج","الابراج","✨ابراج"], ""))
+@app.on_message(filters.command(["ابراج ✯","الابراج","ابراج"], ""))
 
 async def abrag(c: Client, m: Message):
 
@@ -56,9 +56,9 @@ async def abrag(c: Client, m: Message):
 
         [InlineKeyboardButton("القوس", callback_data="elqoos " + str(m.from_user.id))],
 
-         [InlineKeyboardButton("𖥻 𝐆 𝐑 𝐎 𝐔 𝐏 .", url=f"https://t.me/C7_7M")],
+         [InlineKeyboardButton("- 𝗝 𝗮 𝗖 ! 𝗞 .", url=f"https://t.me/Tm_JACK")],
 
-         [InlineKeyboardButton("𖥻 𝐋 𝐎 𝐓 𝐔 𝐒 .", url=f"https://t.me/l2_2Y")],
+         [InlineKeyboardButton("𝗧𝗲𝗠 𝗝𝗮𝗖𝗞", url=f"https://t.me/SORCE_JACK")],
 
         [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{app.username}?startgroup=new")],
 

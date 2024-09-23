@@ -65,7 +65,7 @@ async def muid(client: Client, message):
     usr = await client.get_chat(message.from_user.id)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"""⌯ 𝐍𝐚𝐦𝐞 :{message.from_user.mention}\n⌯ 𝐔𝐬𝐞𝐫 :@{message.from_user.username}\n⌯ 𝐈𝐝 :`{message.from_user.id}`\n⌯ 𝐁𝐢𝐨 :{usr.bio}\n⌯ 𝐂𝐡𝐚𝐭 : {message.chat.title}\n⌯ 𝐈𝐝 𝐜𝐡𝐚𝐭:`{message.chat.id}`""", 
+    await message.reply_photo(photo,       caption=f"""𝅄 𓏺 𝐍𝐚𝐦𝐞 :{message.from_user.mention}\n𝅄 𓏺 𝐔𝐬𝐞𝐫 :@{message.from_user.username}\n𝅄 𓏺 𝐈𝐝 :`{message.from_user.id}`\n𝅄 𓏺 𝐁𝐢𝐨 :{usr.bio}\n𝅄 𓏺 𝐂𝐡𝐚𝐭 : {message.chat.title}\n𝅄 𓏺 𝐈𝐝 𝐜𝐡𝐚𝐭:`{message.chat.id}`""", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [

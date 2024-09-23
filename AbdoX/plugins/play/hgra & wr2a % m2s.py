@@ -48,7 +48,7 @@ def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [InlineKeyboardButton("اضغط للعب", callback_data="join")],
-                    [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐄 𝐋𝐎𝐓𝐔𝐒", url="https://t.me/l2_2Y")]
+                    [InlineKeyboardButton("𝗧𝗲𝗠 𝗝𝗮𝗖𝗞", url="https://t.me/SORCE_JACK")]
                 ]
             )
         )
@@ -67,7 +67,7 @@ def join(client, callback_query):
                         [InlineKeyboardButton("حجرة", callback_data="حجرة"),
                          InlineKeyboardButton("ورقة", callback_data="ورقة"),
                          InlineKeyboardButton("مقص", callback_data="مقص")],[
-                         InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐄 𝐋𝐎𝐓𝐔𝐒", url="https://t.me/l2_2Y")
+                         InlineKeyboardButton("𝗧𝗲𝗠 𝗝𝗮𝗖𝗞", url="https://t.me/SORCE_JACK")
                          ]
                     ]
                 )
@@ -94,7 +94,7 @@ def choose(client, callback_query):
                         [InlineKeyboardButton("حجرة", callback_data="حجرة"),
                          InlineKeyboardButton("ورقة", callback_data="ورقة"),
                          InlineKeyboardButton("مقص", callback_data="مقص")],
-                         [InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐄 𝐋𝐎𝐓𝐔𝐒", url="https://t.me/l2_2Y")]
+                         [InlineKeyboardButton("𝗧𝗲𝗠 𝗝𝗮𝗖𝗞", url="https://t.me/SORCE_JACK")]
                     ]
                 )
             )

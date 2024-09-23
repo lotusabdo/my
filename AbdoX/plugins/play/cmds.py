@@ -15,9 +15,9 @@ async def zdatsr(client: Client, message: Message):
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
     usrnam = usr.username
-    await message.reply_photo(
-        photo=f"https://te.legra.ph/file/38cb3727c5a03e6787b2e.jpg",
-        caption=f"""<b>↯︙مرحباً بك عزيزي</b>\n<b>↯︙استخدم الازرار بالاسفل\n» ل تصفح اوامر الميوزك</b>""",
+    await message.reply_video(
+        video=f"https://t.me/tmjack1/14",
+        caption=f"""- 𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐉𝐚𝐜𝐤.""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -35,7 +35,7 @@ async def zdatsr(client: Client, message: Message):
                     InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
                 ],[
                     InlineKeyboardButton(
-                        "‹ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐋𝐎𝐓𝐔𝐒 ›", url="https://t.me/l2_2Y"),
+                        "‹ 𝗧𝗲𝗠 𝗝𝗮𝗖𝗞 ›", url="https://t.me/SORCE_JACK"),
                 ],
             ]
         ),

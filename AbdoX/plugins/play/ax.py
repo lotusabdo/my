@@ -54,62 +54,32 @@ async def brah2(client, message):
     ho = divmod(ma[0], 60)
     day = divmod(ho[0], 24)
     if da < 60:
-       await message.reply(f"** - تم انهاء مكالمة الفيديو مدتها {da} ثواني وصكرها **")        
+       await message.reply(f" - تم انهاء مكالمة الفيديو مدتها {da} ثواني وصكرها ")        
     elif 60 < da < 3600:
         if 1 <= ma[0] < 2:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها دقيقه**")
+            await message.reply(f"- تم انهاء مكالمة الفيديو مدتها دقيقه")
         elif 2 <= ma[0] < 3:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها دقيقتين **")
+            await message.reply(f"- تم انهاء مكالمة الفيديو مدتها دقيقتين ")
         elif 3 <= ma[0] < 11:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {ma[0]} دقايق **")  
+            await message.reply(f"- تم انهاء مكالمة الفيديو مدتها {ma[0]} دقايق ")  
         else:
-            await message.reply(f"**- تم إنهاء مكالمة الفيديو مدتها {ma[0]} دقيقه**")
+            await message.reply(f"- تم إنهاء مكالمة الفيديو مدتها {ma[0]} دقيقه")
     elif 3600 < da < 86400:
         if 1 <= ho[0] < 2:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها ساعه **")
+            await message.reply(f"- تم انهاء مكالمة الفيديو مدتها ساعه ")
         elif 2 <= ho[0] < 3:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها ساعتين **")
+            await message.reply(f"- تم انهاء مكالمة الفيديو مدتها ساعتين ")
         elif 3 <= ho[0] < 11:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {ho[0]} ساعات **")  
+            await message.reply(f"- تم انهاء مكالمة الفيديو مدتها {ho[0]} ساعات ")  
         else:
-            await message.reply(f"**- تم إنهاء مكالمة الفيديو مدتها {ho[0]} ساعة **")
+            await message.reply(f"- تم إنهاء مكالمة الفيديو مدتها {ho[0]} ساعة ")
     else:
         if 1 <= day[0] < 2:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها يوم **")
+            await message.reply(f"- تم انهاء مكالمة الفيديو مدتها يوم ")
         elif 2 <= day[0] < 3:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها يومين **")
+            await message.reply(f"- تم انهاء مكالمة الفيديو مدتها يومين ")
         elif 3 <= day[0] < 11:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {day[0]} ايام **")  
+            await message.reply(f"- تم انهاء مكالمة الفيديو مدتها {day[0]} ايام ")  
         else:
-            await message.reply(f"**- تم إنهاء مكالمة الفيديو مدتها {day[0]} يوم**")
-@Client.on_message(filters.command("رتبتي", ""))
-async def bt(client: Client, message: Message):
-  try:
-     if not message.chat.type == enums.ChatType.PRIVATE:
-      if await joinch(message):
-            return
-     userr = message.from_user
-     bot_username = client.me.username
-     dev = await get_dev(bot_username)
-     if userr.username in OWNER :
-         await message.reply_text("**♪ رتبتك هي : مطور السورس  💎 .**")
-         return
-     if userr.username in ["EU_TM"]:
-         await message.reply_text("**♪ رتبتك هي : المطور كابوس  💎 .**")
-         return
-     if userr.username in ["EU_TM"]:
-         await message.reply_text("**♪ رتبتك هي : المطور كابوس 💎 .**")
-         return
-     if userr.id == dev:
-        return await message.reply_text("**♪ رتبتك هي : المطور الاساسي  💎 .**")
-     user = await message._client.get_chat_member(message.chat.id, message.from_user.id)
-     if user.status == enums.ChatMemberStatus.OWNER:
-         await message.reply_text("**♪ رتبتك هي : المالك  💎 .**")
-         return
-     if user.status == enums.ChatMemberStatus.ADMINISTRATOR:
-         await message.reply_text("**♪ رتبتك هي : الادمن  💎 .**")
-         return 
-     else:
-         await message.reply_text("**♪ رتبتك هي : العضو  💎 .**")
-  except:
-    pass
+            await message.reply(f"- تم إنهاء مكالمة الفيديو مدتها {day[0]} يوم")
+

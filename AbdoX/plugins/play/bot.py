@@ -10,7 +10,7 @@ from config import *
 
 bot_name = {}
 
-name = "لوتس"
+name = "جاك"
 
 @app.on_message(filters.regex("تعيين اسم البوت")& filters.private & SUDOERS, group=7113)
 async def set_bot_name(client, message):

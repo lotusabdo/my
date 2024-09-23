@@ -16,7 +16,7 @@ async def zdatsr(client: Client, message: Message):
     name = usr.first_name
     usrnam = usr.username
     await message.reply_video(
-        video=f"https://t.me/tmjack1/14",
+        video=f"https://t.me/x_i_ci/5",
         caption=f"""- 𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐉𝐚𝐜𝐤.""",
         reply_markup=InlineKeyboardMarkup(
             [

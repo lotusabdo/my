@@ -53,7 +53,7 @@ async def khfzss(client: Client, message: Message):
     id = usrr.id
     username = usrr.username
     async for photo in client.get_chat_photos(OWNER_ID, limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""𖥻 DeVeLoPer BoT Music .\n\n𖥻 UsEr : @{username} \n𖥻 Id : {id} \n𖥻 BiO : {bio}""", 
+                    await message.reply_photo(photo.file_id,       caption=f"""𝅄 𓏺 DeVeLoPer BoT Music .\n\n𝅄 𓏺 UsEr : @{username} \n𝅄 𓏺 Id : {id} \n𝅄 𓏺 BiO : {bio}""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -75,12 +75,12 @@ async def khfzss(client: Client, message: Message):
     user_name = message.from_user.first_name
     buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await app.send_message(OWNER_ID, f"<b>✯ قام {message.from_user.mention}\n</b>"
-                                     f"<b>✯ بمناداتك عزيزي المطور\n</b>"
-                                     f"<b>✯ الأيدي {user_id}\n</b>"
-                                     f"<b>✯ اليوزر @{user_ab}\n</b>"
-                                     f"<b>✯ ايدي المجموعة {message.chat.id}\n</b>"
-                                     f"<b>✯ يوزر المجموعه {chatusername}</b>",
+    await app.send_message(OWNER_ID, f"<b>𝅄 𓏺 قام {message.from_user.mention}\n</b>"
+                                     f"<b>𝅄 𓏺 بمناداتك عزيزي المطور\n</b>"
+                                     f"<b>𝅄 𓏺 الأيدي {user_id}\n</b>"
+                                     f"<b>𝅄 𓏺 اليوزر @{user_ab}\n</b>"
+                                     f"<b>𝅄 𓏺 ايدي المجموعة {message.chat.id}\n</b>"
+                                     f"<b>𝅄 𓏺 يوزر المجموعه {chatusername}</b>",
                                      reply_markup=reply_markup)
 
 @app.on_message(filters.command(["تحويل لصوره"], ""))

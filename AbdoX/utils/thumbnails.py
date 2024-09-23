@@ -1,25 +1,16 @@
-
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import os
 import re
+import random
 import textwrap
-
 import aiofiles
 import aiohttp
-from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
-                 ImageFont, ImageOps)
+
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 from youtubesearchpython.__future__ import VideosSearch
 
-from config import YOUTUBE_IMG_URL, OWNER_ID
 from AbdoX import app
+from config import YOUTUBE_IMG_URL
+
 
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
@@ -28,6 +19,15 @@ def changeImageSize(maxWidth, maxHeight, image):
     newHeight = int(heightRatio * image.size[1])
     newImage = image.resize((newWidth, newHeight))
     return newImage
+
+
+def clear(text):
+    words = text.split(" ")
+    title = ""
+    for word in words:
+        if len(title) + len(word) < 60:
+            title += " " + word
+    return title.strip()
 
 
 async def get_thumb(videoid):
@@ -61,54 +61,64 @@ async def get_thumb(videoid):
         async with aiohttp.ClientSession() as session:
             async with session.get(thumbnail) as resp:
                 if resp.status == 200:
-                    f = await aiofiles.open(
-                        f"cache/thumb{videoid}.png", mode="wb"
-                    )
+                    f = await aiofiles.open(f"cache/thumb{videoid}.png", mode="wb")
                     await f.write(await resp.read())
                     await f.close()
-        owner = int(OWNER_ID)
-        wxyz = await app.download_media(
-              (await app.get_users(owner)).photo.big_file_id,
-              file_name=f"{owner}.jpg",
-        )
-        wxy = Image.open(wxyz)
+
         youtube = Image.open(f"cache/thumb{videoid}.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
-        background = image2.filter(filter=ImageFilter.BoxBlur(20))
-        enhancer = ImageEnhance.Brightness(background)
-        background = enhancer.enhance(0.6)
-        Xcenter = wxy.width / 2
-        Ycenter = wxy.height / 2
+        
+        # Check if the 'filter' attribute is available in the Image module
+        if hasattr(Image, 'filter'):
+            background = image2.filter(filter=ImageFilter.BoxBlur(50))
+            enhancer = ImageEnhance.Brightness(background)
+            background = enhancer.enhance(0.9)
+        else:
+            # If 'filter' attribute is not available, use a different approach for blurring
+            background = image2.filter(ImageFilter.BoxBlur(50))
+            enhancer = ImageEnhance.Brightness(background)
+            background = enhancer.enhance(0.9)
+        
+        Xcenter = youtube.width / 2
+        Ycenter = youtube.height / 2
         x1 = Xcenter - 250
         y1 = Ycenter - 250
         x2 = Xcenter + 250
         y2 = Ycenter + 250
-        logo = wxy.crop((x1, y1, x2, y2))
+        logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((520, 520), Image.ANTIALIAS)
-        logo = ImageOps.expand(logo, border=15, fill="white")
+        logo = ImageOps.expand(logo, border=17, fill="pink")
         background.paste(logo, (50, 100))
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("AbdoX/assets/font2.ttf", 40)
-        font2 = ImageFont.truetype("AbdoX/assets/font2.ttf", 70)
+        
+        # Adjust the font size here
+        font_size = 40
+        font = ImageFont.truetype("AbdoX/assets/font2.ttf", font_size)
+        font2_size = 70
+        font2 = ImageFont.truetype("AbdoX/assets/font2.ttf", font2_size)
         arial = ImageFont.truetype("AbdoX/assets/font2.ttf", 30)
-        name_font = ImageFont.truetype("AbdoX/assets/font2.ttf", 30)
-        para = textwrap.wrap(title, width=32)
+        name_font = ImageFont.truetype("AbdoX/assets/font.ttf", 40)
+        
+        para = textwrap.wrap(clear(title), width=32) 
         j = 0
         draw.text(
-            (600, 150),
-            "JACK PLAYING",
+            (6, 6), f"{BOT_NAME}", fill="Yellow", font=name_font
+        )
+        draw.text(
+            (600, 200),
+            f"NOW PLAYING",
             fill="white",
             stroke_width=2,
-            stroke_fill="white",
+            stroke_fill="yellow",
             font=font2,
         )
         for line in para:
             if j == 1:
                 j += 1
                 draw.text(
-                    (600, 340),
-                    f"{line}",
+                    (600, 390),
+                    f"Tɪᴛʟᴇ : {line}",
                     fill="white",
                     stroke_width=1,
                     stroke_fill="white",
@@ -117,7 +127,7 @@ async def get_thumb(videoid):
             if j == 0:
                 j += 1
                 draw.text(
-                    (600, 280),
+                    (600, 330),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
@@ -128,20 +138,26 @@ async def get_thumb(videoid):
         draw.text(
             (600, 450),
             f"Views : {views[:23]}",
-            (255, 255, 255),
-            font=arial,
+            fill="white",
+            stroke_width=1,
+            stroke_fill="white",
+            font=font,
         )
         draw.text(
             (600, 500),
             f"Duration : {duration[:23]} Mins",
-            (255, 255, 255),
-            font=arial,
+            fill="white",
+            stroke_width=1,
+            stroke_fill="white",
+            font=font,
         )
         draw.text(
             (600, 550),
             f"Channel : {channel}",
-            (255, 255, 255),
-            font=arial,
+            fill="white",
+            stroke_width=1,
+            stroke_fill="white",
+            font=font,
         )
         try:
             os.remove(f"cache/thumb{videoid}.png")
@@ -149,6 +165,6 @@ async def get_thumb(videoid):
             pass
         background.save(f"cache/{videoid}.png")
         return f"cache/{videoid}.png"
-    except Exception:
-        await app.send_message("z0hary", Exception)
+    except Exception as e:
+        print(e)
         return YOUTUBE_IMG_URL

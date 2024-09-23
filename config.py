@@ -6,7 +6,7 @@ from pyrogram import filters
 from database import get_db_general_rtb
 from utils import get_restarted
 
-super_sudoers = [6456857472]
+super_sudoers = [7222106266]
 
 load_dotenv()
 
@@ -26,7 +26,7 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 2000))
 LOGGER_ID = int(getenv("LOGGER_ID", None))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 7543674320))
+OWNER_ID = int(getenv("OWNER_ID", 7222106266))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
